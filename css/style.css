@@ -1,18 +1,27 @@
-.container-ipad {
-  width: 100%;             
-  max-width: 768px;        /* Bredden på en iPad på højkant */
-  
-  /* DETTE FIXER DET KVADRATISKE LOOK: */
-  aspect-ratio: 3 / 4;     /* Tvinger boksen til at have det helt rigtige iPad-højkant-forhold */
-  
-  margin: 40px auto;       /* Centrerer og giver 40px luft i top og bund på computerskærmen */
-  
-  background-image: url('../img/baggrund.png');
-  background-size: cover;  /* Sørger for at baggrunden dækker hele containeren */
-  background-position: center; /* Centrerer baggrunden */
-      
-  padding: 40px;           /* Lidt ekstra luft i toppen og siderne */
-  box-sizing: border-box;  
-
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EBE4D2; /* Beige baggrund udenfor iPad */
+  overflow: hidden;          /* Fjerner scrollbar på pc */
 }
+
+.container-ipad {
+  /* HØJDE-LOGIKKEN */
+  height: 100vh; /* Tvinger kassen til at være lige så høj som pc-skærmen */
+  max-height: 1024px; /* Men den må aldrig blive højere end en ægte iPad-skærm */
+  
+  /* ASPECT RATIO */
+  aspect-ratio: 3 / 4; /* Computeren regner en smallere bredde ud, så det matcher en iPad */
+  
+  margin: 0 auto; /* Centrerer den flot på midten af skærmen */
+  
+  /* Baggrundsbillede */
+  background-image: url('../img/baggrund.png');
+  background-size: cover;  
+  background-position: center; 
+      
+  padding: 40px;           
+  box-sizing: border-box;  
+}
+
 
