@@ -9,6 +9,9 @@
   margin: 0 auto;          /* Centrerer kassen */
   
   background-color: grey; 
+  background-image: url('../img/baggrund.png');
+  background-size: cover;  /* Sørger for at baggrunden dækker hele containeren */
+  background-position: center; /* Centrerer baggrunden */
       
   padding: 40px;           /* Lidt ekstra luft i toppen og siderne */
   box-sizing: border-box;  
