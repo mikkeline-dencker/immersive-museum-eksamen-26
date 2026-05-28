@@ -1,0 +1,16 @@
+.container-ipad {
+  width: 100%;             
+  max-width: 768px;        /* Fast bredde */
+  
+  /* REGLER FOR FAST HØJDE */
+  height: 100vh;           /* Skærmens højde på iPad */
+  max-height: 1024px;      /* På en computer stopper højden ved en rigtig iPad-højde */
+  
+  margin: 0 auto;          /* Centrerer kassen */
+  
+  background-color: grey; 
+      
+  padding: 40px;           /* Lidt ekstra luft i toppen og siderne */
+  box-sizing: border-box;  
+}
+
