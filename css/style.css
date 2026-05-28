@@ -1,18 +1,54 @@
 .container-ipad {
   width: 100%;             
-  max-width: 768px;        /* Bredden på en iPad på højkant */
+  max-width: 768px;       
   
-  /* DETTE FIXER DET KVADRATISKE LOOK: */
-  aspect-ratio: 3 / 4;     /* Tvinger boksen til at have det helt rigtige iPad-højkant-forhold */
-  
-  margin: 40px auto;       /* Centrerer og giver 40px luft i top og bund på computerskærmen */
+
+  aspect-ratio: 3 / 4;     
+  margin: 40px auto;      
   
   background-image: url('../img/baggrund.png');
-  background-size: cover;  /* Sørger for at baggrunden dækker hele containeren */
-  background-position: center; /* Centrerer baggrunden */
+  background-size: cover;  
+  background-position: center; 
       
-  padding: 40px;           /* Lidt ekstra luft i toppen og siderne */
+  padding: 40px;          
   box-sizing: border-box;  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: flex-start;
+  position: relative;
 
 }
 
+.hvid-boks {
+  width: 90%;
+  height: 90%; 
+    aspect-ratio: 1 / 1;
+  background-color: rgba(255, 255, 255, 0.81); 
+  border-radius: 45.54px;
+  position: absolute;
+  z-index: 1; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 20px;
+}
+
+h1 {
+  font-family: yrsa, sans-serif;
+  font-size: 58px;
+  color: #345A7C;
+  z-index: 2;
+}
+
+.du {
+  color: #D25D1E;
+}
+
+.undertekst {
+  font-family: yrsa, sans-serif;
+  font-size: 18px;
+  color: #345A7C;
+  z-index: 2;
+}
