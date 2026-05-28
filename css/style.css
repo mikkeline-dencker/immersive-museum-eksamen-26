@@ -22,30 +22,14 @@ body {
   padding: 40px;           /* Lidt ekstra luft i toppen og siderne */
   box-sizing: border-box;  
 
-}
-
-.container-ipad {
-  width: 100%;             
-  max-width: 768px;       
-  
-
-  aspect-ratio: 3 / 4;     
-  margin: 40px auto;      
-  
-  background-image: url('../img/baggrund.png');
-  background-size: cover;  
-  background-position: center; 
-      
-  padding: 40px;          
-  box-sizing: border-box;  
-
-    display: flex;
+   display: flex;
     flex-direction: column;
     align-items: center;
   justify-content: flex-start;
   position: relative;
 
 }
+
 
 .hvid-boks {
   width: 90%;
