@@ -1,14 +1,12 @@
 .container-ipad {
   width: 100%;             
-  max-width: 768px;        /* Fast bredde */
+  max-width: 768px;        /* Bredden på en iPad på højkant */
   
-  /* REGLER FOR FAST HØJDE */
-  height: 100vh;           /* Skærmens højde på iPad */
-  max-height: 1024px;      /* På en computer stopper højden ved en rigtig iPad-højde */
+  /* DETTE FIXER DET KVADRATISKE LOOK: */
+  aspect-ratio: 3 / 4;     /* Tvinger boksen til at have det helt rigtige iPad-højkant-forhold */
   
-  margin: 0 auto;          /* Centrerer kassen */
+  margin: 40px auto;       /* Centrerer og giver 40px luft i top og bund på computerskærmen */
   
-  background-color: grey; 
   background-image: url('../img/baggrund.png');
   background-size: cover;  /* Sørger for at baggrunden dækker hele containeren */
   background-position: center; /* Centrerer baggrunden */
