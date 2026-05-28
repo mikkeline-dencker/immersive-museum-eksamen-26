@@ -32,7 +32,7 @@ body {
 .hvid-boks {
   width: 90%;
   height: 90%; 
-  /* Boksen følger iPad'ens form pænt. */
+    aspect-ratio: 1 / 1;
   background-color: rgba(255, 255, 255, 0.81); 
   border-radius: 45.54px;
   position: absolute;
@@ -40,14 +40,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 40px; /* Så indholdet ikke rører kanterne */
-  box-sizing: border-box; /* Sørger for at padding ikke gør den hvide boks for stor */
-  
-  /* Gør det nemt at styre teksten indeni den hvide boks: */
+  padding-top: 20px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centrerer tekst og indhold lodret i den hvide boks */
+ justify-content: flex-start;
 }
 
 h1 {
@@ -55,8 +53,6 @@ h1 {
   font-size: 58px;
   color: #345A7C;
   z-index: 2;
-  margin-top: 0; /* Fjerner luft i toppen af overskriften */
-  text-align: center;
 }
 
 .du {
@@ -65,8 +61,10 @@ h1 {
 
 .undertekst {
   font-family: yrsa, sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   color: #345A7C;
   z-index: 2;
+  margin-bottom: 0;
   text-align: center;
+  padding: 0 20px;
 }
