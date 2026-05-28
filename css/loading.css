@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EBE4D2; /* Beige baggrund udenfor iPad */
+  overflow: hidden;          /* Fjerner scrollbar på pc */
+}
+
+.container-ipad {
+  /* HØJDE-LOGIK TIL PC (SÅ MAN IKKE SKAL SCROLLE): */
+  height: 100vh; /* Tvinger kassen til at matche pc-skærmens højde */
+  max-height: 1024px; /* Men den må aldrig blive højere end en ægte iPad-skærm */
+  
+  aspect-ratio: 3 / 4; /* Computeren regner automatisk den rigtige bredde ud */
+  margin: 0 auto; /* Centrerer kassen på midten uden top/bund-margin */
+  
+  /* Baggrundsbillede */
+  background-image: url('../img/baggrund.png');
+  background-size: cover;  
+  background-position: center; 
+      
+  padding: 40px;           
+  box-sizing: border-box;  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden; /* Sikrer at intet stikker ud af iPad'en */
+}
+
+.hvid-boks {
+  width: 90%;
+  height: 90%; 
+    aspect-ratio: 1 / 1;
+  background-color: rgba(255, 255, 255, 0.81); 
+  border-radius: 45.54px;
+  position: absolute;
+  z-index: 1; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ justify-content: flex-start;
+}
+
+.du-er {
+  font-family: yrsa, sans-serif;
+  font-size: 40px;
+  color: #345A7C;
+  z-index: 2;
+  margin-top: 30px;
+  z-index: 3;
+}
+
+
+.vente-gif {
+  width: 85%;
+  max-width: 700px;
+  height: auto;
+  margin-top: 40px;
+  z-index: 3;
+}
