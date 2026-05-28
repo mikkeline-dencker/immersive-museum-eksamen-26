@@ -1,3 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EBE4D2; /* Beige baggrund udenfor iPad */
+  overflow: hidden;          /* Fjerner scrollbar på pc */
+}
+
+.container-ipad {
+  width: 100%;             
+  max-width: 768px;        /* Bredden på en iPad på højkant */
+  
+  /* DETTE FIXER DET KVADRATISKE LOOK: */
+  aspect-ratio: 3 / 4;     /* Tvinger boksen til at have det helt rigtige iPad-højkant-forhold */
+  
+  margin: 40px auto;       /* Centrerer og giver 40px luft i top og bund på computerskærmen */
+  
+  /* Baggrundsbillede */
+  background-image: url('../img/baggrund.png');
+  background-size: cover;  
+  background-position: center; 
+      
+  padding: 40px;           /* Lidt ekstra luft i toppen og siderne */
+  box-sizing: border-box;  
+
+}
+
 .container-ipad {
   width: 100%;             
   max-width: 768px;       
