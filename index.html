@@ -25,7 +25,7 @@
   <body>
     <div class="container-ipad">
       <div class="hvid-boks">
-        <div id="start-screen" class="screen-section">
+        <div id="start-skaerm" class="skaerm-sektion">
           <h1>Hvem minder <span class="du">du</span> om?</h1>
           <div class="undertekst">
             <p>
@@ -38,6 +38,7 @@
           <img src="img/haand.png" alt="haand" class="haand" />
         </div>
 
+
         <!--loadning skærm-->
         <div id="vente-side" class="vente-side" style="display: none">
           <div class="du-er"><p>Du er...</p></div>
@@ -45,25 +46,28 @@
         </div>
 
         <!--quiz skærm-->
-        <div id="quiz-screen" class="screen-section" style="display: none">
-          <div class="progress-container">
-            <div id="progress-bar" class="progress-bar"></div>
+        <div id="quiz-skaerm" class="skaerm-sektion" style="display: none">
+            <div class="progress-container">
+              <div id="progress-bar" class="progress-bar"></div>
             </div>
-            <h2 id="question-text">Spørgsmål</h2>
-            <div id="answer-buttons-container"></div>
+
+            <h2 id="spg-tekst">Spørgsmål</h2>
+
+            <div id="svar-knap-container"></div>
+
             <button class="tilbage-knap" onclick="goBackToStart()">
               Tilbage til forsiden
             </button>
-        </div>
+          </div>
 
         <!--resultat skærm-->
-        <div id="resultat-skaerm" class="screen-section" style="display: none">
+        <div id="resultat-skaerm" class="skaerm-sektion" style="display: none">
           <p>Du er...</p>
           <h2 id="doll-name" class="du">Dukkens navn</h2>
           <div class="undertekst">
-            <p id="doll-description">Beskrivelse af dukke</p>
+            <p id="dukke-beskrivelse">Beskrivelse af dukke</p>
           </div>
-        </div>
+        </>
       </div>
     </div>
 
