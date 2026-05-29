@@ -158,3 +158,5 @@ const maxScore = Math.max(...Object.values(scores));
   document.getElementById('dukke-navn').innerText = dukker[gemtVinder].navn;
   document.getElementById('dukke-beskrivelse').innerText = dukker[gemtVinder].beskrivelse;
 };
+
+
