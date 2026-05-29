@@ -58,8 +58,6 @@ body {
   justify-content: flex-start;
 }
 
-
-
 /* Tekst styling */
 h1 {
   font-family: yrsa, sans-serif;
@@ -142,4 +140,103 @@ h1 {
   50% {
     transform: scale(1.25);
   }
+}
+
+.quiz-svarknap {
+  position: relative;
+  z-index: 4;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-family: yrsa, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  background-color: #b9cbd9;
+  color: #355c7d;
+  border: 4px solid #355c7d;
+  border-radius: 999px;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.15);
+  max-width: 650px;
+  margin: 30px auto;
+  width: 75%;
+  height: 90px; /* alle knapper bliver lige høje */
+  display: flex;
+  align-items: center; /* centrerer lodret */
+  justify-content: center; /* centrerer vandret */
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Det hvide highlight i højre hjørne af knappen */
+.quiz-svarknap::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 50px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 100%;
+  transform: rotate(15deg);
+}
+
+/* Tilbage-knap */
+.tilbage-knap {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e9a3a0;
+  border: 4px solid #c65753;
+  color: #345a7c;
+  text-decoration: none;
+  padding: 2px 50px;
+  border-radius: 25px;
+  font-family: yrsa, serif;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.tilbage-pil {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.tilbage-knap::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  width: 18px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  transform: rotate(30deg);
+}
+
+.progress-container {
+  width: 80%;
+  height: 20px;
+  background-color: #b9cbd9;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #d25d1e;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+#spg-tekst {
+  font-family: yrsa, sans-serif;
+  font-size: 22px;
+  color: #345a7c;
+  margin-top: 20px;
+  text-align: center;
 }
