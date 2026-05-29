@@ -48,12 +48,9 @@
 
           <div id="svar-knap-container"></div>
 
-          <button class="tilbage-knap" onclick="goBackToStart()">
-            Tilbage til forsiden
-          </button>
           <!-- Tilbage-knap -->
           <a href="index.html" class="tilbage-knap">
-            <span class="tilbage-pil">&#8249;</span>
+            <span class="tilbage-pil"></span>
             Tilbage til forsiden
           </a>
         </div>
@@ -66,10 +63,33 @@
 
         <!--resultat skærm-->
         <div id="resultat-skaerm" class="skaerm-sektion" style="display: none">
-          <p>Du er...</p>
-          <h2 id="dukke-navn" class="du">Dukkens navn</h2>
-          <div class="undertekst">
-            <p id="dukke-beskrivelse">Beskrivelse af dukke</p>
+          <!-- <p>Du er...</p> -->
+          <!-- <h2 id="dukke-navn" class="du">Dukkens navn</h2>
+          <div class="undertekst"> -->
+            <!-- <p id="dukke-beskrivelse">Beskrivelse af dukke</p> -->
+
+
+                      <div id="resultat-skaerm" class="skaerm-sektion skjult">
+                <p class="du-er-tekst">Du er...</p>
+                <h1 id="dukke-navn">Dukkens navn</h1>
+
+                <img class="dukke-vinger" src="#" alt="baggrund på dukke bevæger sig" id="dukke-vinger">
+
+                <div class="dukke">
+                    <img class="dukke-billede" src="#" alt="billede af dukke" id="dukke-billede">
+                </div>
+
+                <div class="hvorfor-box">
+                    <span class="hvorfor-tekst">Hvorfor?</span>
+                    <img class="pil-videre" src="img/pil-videre.png" alt="pil videre">
+                </div>
+              </div>
+
+                      <a href="index.html" class="tilbage-knap">
+            <span class="tilbage-pil"></span>
+            Tilbage til forsiden
+          </a>
+          
           </div>
         </div>
       </div>

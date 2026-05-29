@@ -72,29 +72,45 @@ const spg = [
 const dukker = {
   Lulu: {
     navn: "Lulu",
+    billede: "img/lulu.png",
+    baggrund: "img/maling.gif",
     beskrivelse:
       "Du er kreativ, fantasifuld og tør være lidt anderledes. Du skaber din egen verden og lader ikke andre definere din identitet – det er modigt!",
+    baggrundKlasse: "lulu-baggrund",
   },
   Sinhu: {
     navn: "Sinhu",
+    billede: "img/sinhu.png",
+    baggrund: "img/vinger.gif",
     beskrivelse:
       "Du er en sjælden, dyb og magisk beskytter. Ligesom Ovartacis elskede papmaché-hest er du gruppens mest loyale ven og en rådgiver, man kan søge hjælp hos.",
+    baggrundKlasse: "sinhu-baggrund",
   },
   Pupparpasta: {
     navn: "Pupparpasta",
+    billede: "img/pupparpasta.png",
+    baggrund: "img/bog.gif",
     beskrivelse:
       "Du er indbegrebet af leg og humor. For dig er verden et sted uden stramme regler, hvor der altid er plads til nye, skøre og fantastiske idéer.",
+    baggrundKlasse: "pupparpasta-baggrund",
   },
   Verda: {
     navn: "Verda",
+    billede: "img/verda.png",
+    baggrund: "img/cykel.gif",
     beskrivelse:
       "Du er den trofaste ven, der elsker det nære selskab. Du trives bedst på eventyr i hverdagen - gerne en cykeltur til stranden med nogen, du holder af.",
+    baggrundKlasse: "verda-baggrund",
   },
   Dragen: {
     navn: "Dragen",
+    billede: "img/dragen.png",
+    baggrund: "img/drage-vinger.gif",
     beskrivelse:
       "Du er det ultimative symbol på frihed. Du elsker følelsen af uafhængighed og drømmer stort om at kunne bevæge dig frit – både i tid og sted.",
+    baggrundKlasse: "dragen-baggrund",
   },
+
 };
 
 // Pointsystem
