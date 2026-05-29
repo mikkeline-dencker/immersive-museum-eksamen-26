@@ -133,16 +133,24 @@ function visSpoergsmaal() {
       if (spgIndex < spg.length) {
         visSpoergsmaal(); 
       } else {
-        visResultat(); 
+        visLoadingSkaerm(); // Viser loading skærm
       }
     };
     svarContainer.appendChild(btn);
   });
 }
 
+// Loading skærm
+function visLoadingSkaerm() {
+  document.getElementById("quiz-skaerm").style.display = "none";
+  document.getElementById("vente-side").style.display = "block";
+
+  setTimeout(visResultat, 1000);
+}
+
 // Beregner vinder og gemmer i localstorage
 function visResultat() {
-  document.getElementById('quiz-skaerm').style.display = 'none';
+  document.getElementById('vente-side').style.display = 'none';
   document.getElementById('resultat-skaerm').style.display = 'block';
 
 // Finder højeste score eller trækker lod ved stemmelighed
