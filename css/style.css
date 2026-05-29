@@ -243,3 +243,22 @@ h1 {
   text-align: center;
   height: 70px;
 }
+
+.du-er {
+  font-family: yrsa, sans-serif;
+  font-size: 44px;
+  color: #345a7c;
+  text-align: center;
+  top: 20%;
+  margin: 0;
+  margin-top: 60px;
+}
+
+
+.vente-gif {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin-top: 40px;
+  z-index: 3;
+}

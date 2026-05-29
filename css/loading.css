@@ -47,21 +47,3 @@ body {
   align-items: center;
  justify-content: flex-start;
 }
-
-.du-er {
-  font-family: yrsa, sans-serif;
-  font-size: 40px;
-  color: #345A7C;
-  z-index: 2;
-  margin-top: 30px;
-  z-index: 3;
-}
-
-
-.vente-gif {
-  width: 85%;
-  max-width: 700px;
-  height: auto;
-  margin-top: 40px;
-  z-index: 3;
-}
