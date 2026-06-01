@@ -39,13 +39,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
   box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  overflow: hidden;
 }
 
 /* Container til de tre forskellige skærm-sektioner */
@@ -219,6 +214,18 @@ h1 {
   transform: rotate(30deg);
 }
 
+.tilbage-forside {
+  width: 8px;
+  height: auto;
+  margin-left: -30px;
+}
+
+.tilbage-forside-knap img {
+  width: 8px;
+  height: auto;
+  margin-left: -30px;
+}
+
 .progress-container {
   width: 70%;
   height: 12px;
@@ -292,25 +299,7 @@ h1 {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-}
-
-.dukke-billede {
-  height: 70%;
-  width: auto;
-  bottom: 110px;
-  max-width: 60%;
-  object-fit: contain;
-  position: relative;
-  z-index: 5;
-}
-
-.dukke-baggrund {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 25%;
-  left: 0;
-  z-index: 4;
+  margin-bottom: 110px;
 }
 
 .lulu-baggrund {
@@ -335,7 +324,7 @@ h1 {
   position: absolute;
   width: 50%;
   height: auto;
-  top: 40%;
+  top: 30%;
   left: 45%;
   z-index: 4;
 }
@@ -359,12 +348,12 @@ h1 {
 }
 
 .hvorfor-box {
-  width: calc(100% + 80px);
+  width: calc(100% + 90px);
   margin-left: -40px;
   margin-right: -40px;
   background-color: #c1cdda;
-  padding: 20px 30px;
-  z-index: 5;
+  padding: 20px 10px;
+  z-index: 6;
   bottom: 110px;
   position: absolute;
   display: flex;
@@ -379,4 +368,53 @@ h1 {
   font-size: 50px;
   color: #345a7c;
   margin: 0;
+}
+
+.pil-videre {
+  width: 50px;
+  height: auto;
+}
+
+
+/* ================================================
+   DUKKE-BILLEDE INDIVIDUAL STYLING
+   ================================================ */
+
+.lulu-billede {
+  width: 50%;
+  height: auto;
+  z-index: 4;
+  transform: translateY(0);
+}
+
+.sinhu-billede {
+  width: 35%;
+  height: auto;
+  z-index: 4;
+  transform: translateY(10px);
+}
+
+.pupparpasta-billede {
+  width: 35%;
+  height: auto;
+  z-index: 4;
+  transform: translateY(0);
+}
+
+.verda-billede {
+  width: 50%;
+  height: auto;
+  z-index: 4;
+  transform: translateY(0);
+}
+
+.dragen-billede {
+  width: 55%;
+  height: auto;
+  z-index: 4;
+}
+
+
+.skjult {
+  display: none;
 }

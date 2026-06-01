@@ -77,6 +77,7 @@ const dukker = {
     beskrivelse:
       "Du er kreativ, fantasifuld og tør være lidt anderledes. Du skaber din egen verden og lader ikke andre definere din identitet – det er modigt!",
     baggrundKlasse: "lulu-baggrund",
+    billedeKlasse: "lulu-billede",
   },
   Sinhu: {
     navn: "Sinhu",
@@ -85,6 +86,7 @@ const dukker = {
     beskrivelse:
       "Du er en sjælden, dyb og magisk beskytter. Ligesom Ovartacis elskede papmaché-hest er du gruppens mest loyale ven og en rådgiver, man kan søge hjælp hos.",
     baggrundKlasse: "sinhu-baggrund",
+    billedeKlasse: "sinhu-billede",
   },
   Pupparpasta: {
     navn: "Pupparpasta",
@@ -93,6 +95,7 @@ const dukker = {
     beskrivelse:
       "Du er indbegrebet af leg og humor. For dig er verden et sted uden stramme regler, hvor der altid er plads til nye, skøre og fantastiske idéer.",
     baggrundKlasse: "pupparpasta-baggrund",
+    billedeKlasse: "pupparpasta-billede",
   },
   Verda: {
     navn: "Verda",
@@ -101,6 +104,7 @@ const dukker = {
     beskrivelse:
       "Du er den trofaste ven, der elsker det nære selskab. Du trives bedst på eventyr i hverdagen - gerne en cykeltur til stranden med nogen, du holder af.",
     baggrundKlasse: "verda-baggrund",
+    billedeKlasse: "verda-billede",
   },
   Dragen: {
     navn: "Dragen",
@@ -109,6 +113,7 @@ const dukker = {
     beskrivelse:
       "Du er det ultimative symbol på frihed. Du elsker følelsen af uafhængighed og drømmer stort om at kunne bevæge dig frit – både i tid og sted.",
     baggrundKlasse: "dragen-baggrund",
+    billedeKlasse: "dragen-billede",
   },
 
 };
@@ -166,21 +171,41 @@ function visLoadingSkaerm() {
 
 // Beregner vinder og gemmer i localstorage
 function visResultat() {
-  document.getElementById('vente-side').style.display = 'none';
-  document.getElementById('resultat-skaerm').style.display = 'block';
+  document.getElementById("vente-side").style.display = "none";
+  document.getElementById("resultat-skaerm").style.display = "block";
 
-// Finder højeste score eller trækker lod ved stemmelighed
-const maxScore = Math.max(...Object.values(scores));
-  const winners = Object.keys(scores).filter(dukke => scores[dukke] === maxScore);
+  // Finder højeste score blandt alle dukker
+  const maxScore = Math.max(...Object.values(scores));
+
+  // Hvis flere dukker har samme højeste score, samler vi dem
+  const winners = Object.keys(scores).filter(
+    (dukke) => scores[dukke] === maxScore,
+  );
+
+  // Hvis stemmelighed: trækker lod blandt vinderene
   const randomWinnerIndex = Math.floor(Math.random() * winners.length);
   const winner = winners[randomWinnerIndex];
 
+  // Gemmer resultat i browser-hukommelse så det huskes
   localStorage.setItem("quizVinder", winner);
 
+  // Henter den vindende dukke
   let gemtVinder = localStorage.getItem("quizVinder");
-  
-  document.getElementById('dukke-navn').innerText = dukker[gemtVinder].navn;
-  document.getElementById('dukke-beskrivelse').innerText = dukker[gemtVinder].beskrivelse;
-};
+  const dukke = dukker[gemtVinder];
 
+  // Viser dukke-navn
+  document.getElementById("dukke-navn").innerText = dukke.navn;
+
+  // Sætter dukke-billede og tilføjer CSS-klasse for styling
+  const billedeEl = document.getElementById("dukke-billede");
+  billedeEl.src = dukke.billede;
+  billedeEl.className = "dukke-billede"; // Nulstiller tidligere klasser
+  billedeEl.classList.add(dukke.billedeKlasse); // Tilføjer individuel klasse
+
+  // Sætter baggrund-GIF og tilføjer CSS-klasse for styling
+  const baggrundEl = document.getElementById("dukke-vinger");
+  baggrundEl.src = dukke.baggrund;
+  baggrundEl.className = "dukke-baggrund"; // Nulstiller tidligere klasser
+  baggrundEl.classList.add(dukke.baggrundKlasse); // Tilføjer individuel klasse
+}
 
