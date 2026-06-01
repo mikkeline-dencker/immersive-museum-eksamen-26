@@ -31,7 +31,7 @@ body {
 /* Boksen med indholdet */
 .hvid-boks {
   width: 90%;
-  height: 93%;
+  height: 90%;
   background-color: rgba(255, 255, 255, 0.81);
   border-radius: 45px;
   position: absolute;
@@ -51,6 +51,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  z-index: 5;
 }
 
 /* Tekst styling */
@@ -89,6 +90,7 @@ h1 {
 .start-knap {
   position: relative;
   z-index: 4;
+  top: -20px;
   padding: 15px 100px;
   font-size: 40px;
   font-family: yrsa, sans-serif;
@@ -116,13 +118,13 @@ h1 {
 }
 
 .haand {
-  width: 12%;
+  width: 10%;
   max-width: 700px;
   height: auto;
   z-index: 5;
   position: relative;
   left: 180px;
-  margin-top: -30px;
+  margin-top: -60px;
   animation: haand-puls 1.4s ease-in-out infinite;
   transform-origin: center;
 }
@@ -179,7 +181,7 @@ h1 {
 /* Tilbage-knap */
 .tilbage-knap {
   position: absolute;
-  bottom: 55px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   background: #e9a3a0;
@@ -194,7 +196,7 @@ h1 {
   align-items: center;
   gap: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  z-index: 3;
+  z-index: 8;
 }
 
 .tilbage-pil {

@@ -29,21 +29,17 @@ body {
   overflow: hidden; /* Sikrer at intet stikker ud af iPad'en */
 }
 
+
 .hvid-boks {
   width: 90%;
-  height: 90%; 
-    aspect-ratio: 1 / 1;
-  background-color: rgba(255, 255, 255, 0.81); 
-  border-radius: 45.54px;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.81);
+  border-radius: 45px;
   position: absolute;
-  z-index: 1; 
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-top: 20px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
 }
