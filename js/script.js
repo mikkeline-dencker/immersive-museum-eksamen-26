@@ -115,7 +115,6 @@ const dukker = {
     baggrundKlasse: "dragen-baggrund",
     billedeKlasse: "dragen-billede",
   },
-
 };
 
 // Pointsystem
@@ -136,23 +135,25 @@ function visSpoergsmaal() {
   const aktuelleSpg = spg[spgIndex];
   document.getElementById("spg-tekst").innerText = aktuelleSpg.spg;
 
-// Opdaterer progress bar
-    const procent = ((spgIndex + 1) / spg.length) * 100;
-    document.getElementById("progress-bar").style.width = procent + "%";
+  // Opdaterer progress bar
+  const procent = ((spgIndex + 1) / spg.length) * 100;
+  document.getElementById("progress-bar").style.width = procent + "%";
 
-    const svarContainer = document.getElementById("svar-knap-container");
-    svarContainer.innerHTML = "";
+  const svarContainer = document.getElementById("svar-knap-container");
+  svarContainer.innerHTML = "";
 
-    aktuelleSpg.svar.forEach(ans => {
-    const btn = document.createElement('button');
+  aktuelleSpg.svar.forEach((ans) => {
+    const btn = document.createElement("button");
     btn.innerText = ans.tekst;
-    btn.className = 'quiz-svarknap';
+    btn.className = "quiz-svarknap";
     btn.onclick = () => {
-        if(ans.dukke) { scores[ans.dukke]++; } 
-      spgIndex++; 
+      if (ans.dukke) {
+        scores[ans.dukke]++;
+      }
+      spgIndex++;
 
       if (spgIndex < spg.length) {
-        visSpoergsmaal(); 
+        visSpoergsmaal();
       } else {
         visLoadingSkaerm(); // Viser loading skærm
       }
@@ -166,7 +167,7 @@ function visLoadingSkaerm() {
   document.getElementById("quiz-skaerm").style.display = "none";
   document.getElementById("vente-side").style.display = "block";
 
-  setTimeout(visResultat, 1000);
+  setTimeout(visResultat, 1200);
 }
 
 // Beregner vinder og gemmer i localstorage
@@ -186,14 +187,14 @@ function visResultat() {
   const randomWinnerIndex = Math.floor(Math.random() * winners.length);
   const winner = winners[randomWinnerIndex];
 
-  // Gemmer resultat i browser-hukommelse så det huskes
+  // Gemmer resultat i localstorage
   localStorage.setItem("quizVinder", winner);
 
   // Henter den vindende dukke
   let gemtVinder = localStorage.getItem("quizVinder");
   const dukke = dukker[gemtVinder];
 
-  // Viser dukke-navn
+  // Viser dukke-navn på resultatskærmen
   document.getElementById("dukke-navn").innerText = dukke.navn;
 
   // Sætter dukke-billede og tilføjer CSS-klasse for styling
@@ -207,5 +208,29 @@ function visResultat() {
   baggrundEl.src = dukke.baggrund;
   baggrundEl.className = "dukke-baggrund"; // Nulstiller tidligere klasser
   baggrundEl.classList.add(dukke.baggrundKlasse); // Tilføjer individuel klasse
+
+  //Sender også dukkens info ind i pop-up kortet
+  document.getElementById("popup-dukke-navn").innerText = dukke.navn;
+  document.getElementById("dukke-beskrivelse").innerText = dukke.beskrivelse;
 }
 
+// EVENT LISTENERS: Åbner og lukker pop-up
+document.addEventListener("DOMContentLoaded", () => {
+  const hvorforKnap = document.getElementById("hvorfor-knap");
+  const lukKnap = document.getElementById("luk-popup-knap");
+  const popupKort = document.getElementById("popup-kort");
+
+  // Når man klikker på "Hvorfor?", vises pop-up som et flex-element ovenpå alt andet
+  if (hvorforKnap && popupKort) {
+    hvorforKnap.addEventListener("click", () => {
+      popupKort.style.display = "flex";
+    });
+  }
+
+  // Når man klikker på krydset, skjules popup'en helt igen
+  if (lukKnap && popupKort) {
+    lukKnap.addEventListener("click", () => {
+      popupKort.style.display = "none";
+    });
+  }
+});

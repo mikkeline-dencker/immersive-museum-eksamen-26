@@ -63,15 +63,9 @@
         </div>
 
         <!--resultat skærm-->
+       <div id="resultat-skaerm" class="skaerm-sektion" style="display: none"> <p class="du-er-tekst">Du er...</p>
+          <h2 id="dukke-navn">Dukkens navn</h2>        
 
-        <div id="resultat-skaerm" class="skaerm-sektion skjult">
-          <p class="du-er-tekst">Du er...</p>
-            <h2 id="dukke-navn">Dukkens navn</h2>        
-
-          <!-- <div class="undertekst">
-          <p id="dukke-beskrivelse">Beskrivelse af dukke</p> -->
-
-          <!--- Billedet bliver trukket fra JS, derfor er src #> -->
           <img
             class="dukke-baggrund"
             src="#" 
@@ -87,25 +81,31 @@
             id="dukke-billede">
           </div>
 
-          <div class="hvorfor-box">
+          <div class="hvorfor-box" id="hvorfor-knap"> 
             <span class="hvorfor-tekst">Hvorfor?</span>
             <img class="pil-videre" src="img/pil-videre.png" alt="pil videre">
           </div>
           
-          <!-- Tilbage-knap -->
-            <a href="index.html" class="tilbage-knap">
+          <!--popup-kort med info om dukker-->
+          <div id="popup-kort" class="popup-container skjult">
+            <div class="popup-indhold">
+              <span class="luk-popup" id="luk-popup-knap">&times;</span>
+              
+              <h2 id="popup-dukke-navn">Dukkens navn</h2>
+              <p id="dukke-beskrivelse">Beskrivelse af dukke</p>
+              
+              <button class="tag-billede-knap">
+                <img src="img/kamera-ikon.svg" alt="kamera" class="kamera-ikon">
+                Tag billede
+              </button>
+            </div>
+          </div>
+          
+          <a href="index.html" class="tilbage-knap">
             <span class="tilbage-pil"></span>
             <img src="img/tilbage.png" alt="tilbage" class="tilbage-forside">
             Tilbage til forsiden
           </a>
-        </div>
-
-
-          
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="js/script.js"></script>
+        </div> </div> </div> <script src="js/script.js"></script>
   </body>
 </html>

@@ -377,7 +377,6 @@ h1 {
   height: auto;
 }
 
-
 /* ================================================
    DUKKE-BILLEDE INDIVIDUAL STYLING
    ================================================ */
@@ -416,7 +415,97 @@ h1 {
   z-index: 4;
 }
 
-
 .skjult {
   display: none;
+}
+
+/* ================================================
+   POP-UP CARDS
+   ================================================ */
+
+.popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.popup-indhold {
+  background-color: #c1cdda;
+  width: 85%;
+  max-width: 500px;
+  padding: 40px 30px;
+  border-radius: 40px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.luk-popup {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #345a7c;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  z-index: 100;
+}
+
+#popup-dukke-navn {
+  font-family: yrsa, sans-serif;
+  font-size: 55px;
+  color: #345a7c;
+  margin: 10px 0 20px 0;
+}
+
+#dukke-beskrivelse {
+  font-family: yrsa, sans-serif;
+  font-size: 24px;
+  color: #345a7c;
+  line-height: 1.4;
+  margin: 0 0 30px 0;
+}
+
+.tag-billede-knap {
+  background-color: #3e6382;
+  color: white;
+  border: 3px solid #294861;
+  padding: 15px 40px;
+  font-family: 'Afacad', sans-serif;
+  font-size: 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.tag-billede-knap::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  width: 25px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 100%;
+  transform: rotate(15deg);
+}
+
+.kamera-ikon {
+  width: 2
 }
