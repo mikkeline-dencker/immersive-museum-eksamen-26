@@ -363,6 +363,11 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  cursor: pointer;
+}
+
+.hvorfor-box:hover {
+  background-color: #b0bdc7;
 }
 
 .hvorfor-tekst {
