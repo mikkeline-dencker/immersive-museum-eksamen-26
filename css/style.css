@@ -423,19 +423,21 @@ h1 {
    POP-UP CARDS
    ================================================ */
 
+/* Containeren starter som skjult */
 .popup-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3); /*Gør baggrunden lidt mørkere*/
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 99;
+  z-index: 9;
 }
 
+/* Pop-up indhold */
 .popup-indhold {
   background-color: #c1cdda;
   width: 85%;
@@ -450,6 +452,7 @@ h1 {
   align-items: center;
 }
 
+/* Luk-kryds for at lukke pop-up */
 .luk-popup {
   position: absolute;
   top: 25px;
@@ -459,9 +462,10 @@ h1 {
   color: #345a7c;
   font-family: Arial, sans-serif;
   line-height: 1;
-  z-index: 100;
+  z-index: 10;
 }
 
+/* Navn på dukke */
 #popup-dukke-navn {
   font-family: yrsa, sans-serif;
   font-size: 55px;
@@ -469,6 +473,7 @@ h1 {
   margin: 10px 0 20px 0;
 }
 
+/* Beskrivelsesteksten */
 #dukke-beskrivelse {
   font-family: yrsa, sans-serif;
   font-size: 24px;
@@ -477,11 +482,12 @@ h1 {
   margin: 0 0 30px 0;
 }
 
+/* Tag billede-knappen i bunden af kortet */
 .tag-billede-knap {
   background-color: #3e6382;
   color: white;
   border: 3px solid #294861;
-  padding: 15px 40px;
+  padding: 10px 40px;
   font-family: 'Afacad', sans-serif;
   font-size: 24px;
   border-radius: 999px;
@@ -494,6 +500,7 @@ h1 {
   position: relative;
 }
 
+/* Den hvide glans detalje på knappen */
 .tag-billede-knap::after {
   content: "";
   position: absolute;
@@ -504,8 +511,4 @@ h1 {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 100%;
   transform: rotate(15deg);
-}
-
-.kamera-ikon {
-  width: 2
 }
