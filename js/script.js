@@ -1,7 +1,7 @@
 // Array med spg og svar
 const spg = [
   {
-    spg: "Hvad er din absolut største styrke?",
+    spg: "Hvad er din største styrke?",
     svar: [
       {
         tekst: "Min evne til at tænke kreativt og skabe min egen stil",

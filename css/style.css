@@ -67,7 +67,7 @@ h1 {
   font-size: 50px;
   color: #345a7c;
   z-index: 2;
-  margin-top: 50px;
+  margin-top: 70px;
   text-align: center;
 }
 
@@ -82,7 +82,7 @@ h1 {
   z-index: 2;
   margin-top: -47px;
   text-align: center;
-  padding: 0 50px;
+  padding: 0 60px;
 }
 
 /* Forside styling */
@@ -90,7 +90,6 @@ h1 {
   width: 80%;
   max-width: 700px;
   height: auto;
-  margin-top: 20px;
   z-index: 3;
 }
 
@@ -126,6 +125,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 100%;
   transform: rotate(15deg);
+  opacity: 0.5;
 }
 
 .haand {
@@ -155,7 +155,7 @@ h1 {
 
 #spg-tekst {
   font-family: yrsa, sans-serif;
-  font-size: 30px;
+  font-size: 36px;
   color: #345a7c;
   margin-top: 60px;
   text-align: center;
@@ -209,34 +209,36 @@ h1 {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 100%;
   transform: rotate(20deg);
+  opacity: 0.5;
 }
 
 /* ================================================
    TILBAGE-KNAP OG PROGRESS BAR
    ================================================ */
 
+/* Tilbage-knap */
 .tilbage-knap {
   position: absolute;
-  bottom: 50px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   background: #e9a3a0;
   border: 4px solid #c65753;
   color: #345a7c;
   text-decoration: none;
-  padding: 2px 50px;
+  padding: 2px 35px;
   border-radius: 25px;
-  font-family: Afacad, sans-serif;
-  font-size: 20px;
+  font-family: yrsa, serif;
+  font-size: 18px;
   display: flex;
   align-items: center;
   gap: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  z-index: 8;
+  z-index: 3;
 }
 
 .tilbage-pil {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -245,11 +247,12 @@ h1 {
   position: absolute;
   top: 8px;
   right: 6px;
-  width: 18px;
+  width: 14px;
   height: 5px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 100%;
   transform: rotate(30deg);
+  opacity: 0.5;
 }
 
 .tilbage-forside {
@@ -542,12 +545,13 @@ h1 {
   content: "";
   position: absolute;
   top: 6px;
-  right: 20px;
+  right: 10px;
   width: 25px;
   height: 6px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 100%;
   transform: rotate(15deg);
+  opacity: 0.5;
 }
 
 /* Skjul alle skærmene som standard */
@@ -566,7 +570,10 @@ h1 {
   display: flex;
 }
 
-/* Kamera-sektion */
+/* ================================================
+   KAMERA-SKÆRM
+   ================================================ */
+
 .kamera-ramme {
   width: 80%;
   height: 85%;
@@ -642,44 +649,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 100%;
   transform: rotate(30deg);
-}
-
-/* Tilbage-knap */
-.tilbage-knap {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #e9a3a0;
-  border: 4px solid #c65753;
-  color: #345a7c;
-  text-decoration: none;
-  padding: 2px 35px;
-  border-radius: 25px;
-  font-family: yrsa, serif;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  z-index: 3;
-}
-
-.tilbage-pil {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.tilbage-knap::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 6px;
-  width: 14px;
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 100%;
-  transform: rotate(30deg);
+  opacity: 0.5;
 }
 
 /* ── Resultat-visning ── */
@@ -749,6 +719,7 @@ h1 {
   border-radius: 100%;
   transform: rotate(30deg);
   z-index: 6;
+  opacity: 0.5;
 }
 
 .telefon-input {
@@ -803,4 +774,5 @@ h1 {
   border-radius: 100%;
   transform: rotate(30deg);
   z-index: 6;
+  opacity: 0.5;
 }
