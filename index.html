@@ -25,7 +25,7 @@
   <body>
     <div class="container-ipad">
       <div class="hvid-boks">
-        <div id="start-skaerm" class="skaerm-sektion">
+        <div id="start-skaerm" class="skaerm-sektion aktiv">
           <h1>Hvem minder <span class="du">du</span> om?</h1>
           <div class="undertekst">
             <p>
@@ -34,12 +34,12 @@
             </p>
           </div>
           <img src="img/forside.gif" alt="forside gif" class="forside-gif" />
-          <button class="start-knap" onclick="startQuiz()">Start Quiz</button>
+          <button class="start-knap" id="start-quiz-btn">Start Quiz</button>
           <img src="img/haand.png" alt="haand" class="haand" />
         </div>
 
         <!--quiz skærm-->
-        <div id="quiz-skaerm" class="skaerm-sektion" style="display: none">
+        <div id="quiz-skaerm" class="skaerm-sektion">
           <div class="progress-container">
             <div id="progress-bar" class="progress-bar"></div>
           </div>
@@ -57,15 +57,21 @@
         </div>
 
         <!--loading skærm-->
-        <div id="vente-side" class="skaerm-sektion" style="display: none">
+        <div id="vente-side" class="skaerm-sektion">
           <div class="du-er"><p>Du er...</p></div>
           <img src="img/vente.gif" alt="vente gif" class="vente-gif" />
         </div>
 
         <!--resultat skærm-->
+<<<<<<< Updated upstream
         <div id="resultat-skaerm" class="skaerm-sektion" style="display: none">
           <p class="du-er-tekst">Du er...</p>
           <h2 id="dukke-navn">Dukkens navn</h2>
+=======
+       <div id="resultat-skaerm" class="skaerm-sektion"> 
+          <p class="du-er-tekst">Du er...</p>
+          <h2 id="dukke-navn">Dukkens navn</h2>        
+>>>>>>> Stashed changes
 
           <img
             class="dukke-baggrund"
@@ -95,6 +101,7 @@
 
               <h2 id="popup-dukke-navn">Dukkens navn</h2>
               <p id="dukke-beskrivelse">Beskrivelse af dukke</p>
+<<<<<<< Updated upstream
 
               <button id="tagBilledeKnap" class="tag-billede-knap">
                 <img
@@ -102,6 +109,14 @@
                   alt="kamera"
                   class="kamera-ikon"
                 />
+=======
+              
+              <button class="tag-billede-knap">
+                <img 
+                src="img/kamera-ikon.svg" 
+                alt="kamera" 
+                class="kamera-ikon">
+>>>>>>> Stashed changes
                 Tag billede
               </button>
             </div>
@@ -113,6 +128,7 @@
             Tilbage til forsiden
           </a>
         </div>
+<<<<<<< Updated upstream
         <!-- Kamera-ramme -->
         <div id="kamera-skaerm" class="skaerm-sektion" style="display: none">
           <div class="kamera-ramme">
@@ -163,6 +179,10 @@
         </div>
       </div>
     </div>
+=======
+       </div>
+      </div> 
+>>>>>>> Stashed changes
     <script src="js/script.js"></script>
   </body>
 </html>

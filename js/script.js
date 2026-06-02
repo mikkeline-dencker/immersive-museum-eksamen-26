@@ -123,8 +123,8 @@ let scores = { Lulu: 0, Sinhu: 0, Pupparpasta: 0, Verda: 0, Dragen: 0 };
 
 // Starter quizzen
 function startQuiz() {
-  document.getElementById("start-skaerm").style.display = "none";
-  document.getElementById("quiz-skaerm").style.display = "block";
+  document.getElementById("start-skaerm").classList.remove("aktiv");;
+  document.getElementById("quiz-skaerm").classList.add("aktiv");;
   spgIndex = 0;
   scores = { Lulu: 0, Sinhu: 0, Pupparpasta: 0, Verda: 0, Dragen: 0 }; // Nulstil point
   visSpoergsmaal();
@@ -146,7 +146,7 @@ function visSpoergsmaal() {
     const btn = document.createElement("button");
     btn.innerText = ans.tekst;
     btn.className = "quiz-svarknap";
-    btn.onclick = () => {
+    btn.addEventListener("click", () => {
       if (ans.dukke) {
         scores[ans.dukke]++;
       }
@@ -157,23 +157,23 @@ function visSpoergsmaal() {
       } else {
         visLoadingSkaerm(); // Viser loading skærm
       }
-    };
+    });
     svarContainer.appendChild(btn);
   });
 }
 
 // Loading skærm
 function visLoadingSkaerm() {
-  document.getElementById("quiz-skaerm").style.display = "none";
-  document.getElementById("vente-side").style.display = "block";
+  document.getElementById("quiz-skaerm").classList.remove("aktiv");
+  document.getElementById("vente-side").classList.add("aktiv");
 
   setTimeout(visResultat, 1200);
 }
 
 // Beregner vinder og gemmer i localstorage
 function visResultat() {
-  document.getElementById("vente-side").style.display = "none";
-  document.getElementById("resultat-skaerm").style.display = "block";
+  document.getElementById("vente-side").classList.remove("aktiv");
+  document.getElementById("resultat-skaerm").classList.add("aktiv");
 
   // Finder højeste score blandt alle dukker
   const maxScore = Math.max(...Object.values(scores));
@@ -214,8 +214,14 @@ function visResultat() {
   document.getElementById("dukke-beskrivelse").innerText = dukke.beskrivelse;
 }
 
-// EVENT LISTENERS: Åbner og lukker pop-up
 document.addEventListener("DOMContentLoaded", () => {
+  const startKnap = document.getElementById("start-quiz-btn");
+  if (startKnap) {
+    startKnap.addEventListener("click", startQuiz);
+  }
+
+// EVENT LISTENERS: Åbner og lukker pop-up
+
   const hvorforKnap = document.getElementById("hvorfor-knap");
   const lukKnap = document.getElementById("luk-popup-knap");
   const popupKort = document.getElementById("popup-kort");
