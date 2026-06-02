@@ -279,7 +279,6 @@ h1 {
   transition: width 0.3s ease;
 }
 
-
 /* ================================================
     VENTE-SKÆRM
    ================================================ */
@@ -565,4 +564,243 @@ h1 {
 #vente-side.aktiv,
 #resultat-skaerm.aktiv {
   display: flex;
+}
+
+/* Kamera-sektion */
+.kamera-ramme {
+  width: 80%;
+  height: 85%;
+  background: transparent;
+  border: 3px solid #345a7c;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.kamera-ramme video,
+.kamera-ramme canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.kamera-knap {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85px;
+  height: 55px;
+  background: #8fa4b8;
+  border: 4px solid #345a7c;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.kamera-ramme video {
+  transform: scaleX(-1);
+}
+
+.kamera-ramme canvas {
+  display: none; /* Skjult indtil billedet tages */
+}
+
+/* Kamera-knap */
+.kamera-knap {
+  width: 85px;
+  height: 55px;
+  background: #8fa4b8;
+  border: 4px solid #345a7c;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Sørger for at knappen er ovenpå videoen/canvaset */
+}
+
+.kamera-knap img {
+  width: 30px;
+  height: 29px;
+}
+
+.kamera-knap::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  width: 14px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  transform: rotate(30deg);
+}
+
+/* Tilbage-knap */
+.tilbage-knap {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e9a3a0;
+  border: 4px solid #c65753;
+  color: #345a7c;
+  text-decoration: none;
+  padding: 2px 35px;
+  border-radius: 25px;
+  font-family: yrsa, serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.tilbage-pil {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tilbage-knap::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  width: 14px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  transform: rotate(30deg);
+}
+
+/* ── Resultat-visning ── */
+.resultat-visning {
+  display: none; /* Skjult indtil billede er taget */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 70px;
+}
+
+/* Polaroid-kort */
+.polaroid-wrapper {
+  background: #fff;
+  padding: 14px 14px 0 14px;
+  border-radius: 4px;
+  box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.35);
+  transform: rotate(-5deg);
+  width: 62%;
+  max-width: 280px;
+  margin-top: -100px;
+}
+
+.taget-billede {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.polaroid-bund {
+  padding: 10px 6px 12px;
+  text-align: center;
+}
+
+.polaroid-logo {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Deling-sektion */
+.deling-sektion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+.deling-sektion::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 110px;
+  width: 14px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  transform: rotate(30deg);
+  z-index: 6;
+}
+
+.telefon-input {
+  flex: 1;
+  min-width: 0;
+  height: 55px;
+  padding: 0 18px;
+  border: 4px solid #345a7c;
+  border-radius: 30px;
+  box-sizing: border-box;
+  background: #91a6b9;
+  font-family: Yrsa, serif;
+  font-size: 20px;
+  color: #345a7c;
+  outline: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.telefon-input::placeholder {
+  color: #fff;
+  font-family: Yrsa, sans-serif;
+}
+
+.deling-knap {
+  width: 85px;
+  height: 55px;
+  background: #8fa4b8;
+  border: 4px solid #345a7c;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  z-index: 2; /* Sørger for at knappen er ovenpå videoen/canvaset */
+}
+
+.deling-knap .deling-ikon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.deling-knap::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  width: 14px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  transform: rotate(30deg);
+  z-index: 6;
 }
