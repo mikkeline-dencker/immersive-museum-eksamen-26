@@ -51,7 +51,7 @@
           <!-- Tilbage-knap -->
           <a href="index.html" class="tilbage-knap">
             <span class="tilbage-pil"></span>
-            <img src="img/tilbage.png" alt="tilbage" class="tilbage-forside">
+            <img src="img/tilbage.png" alt="tilbage" class="tilbage-forside" />
             Tilbage til forsiden
           </a>
         </div>
@@ -63,49 +63,106 @@
         </div>
 
         <!--resultat skærm-->
-       <div id="resultat-skaerm" class="skaerm-sektion" style="display: none"> <p class="du-er-tekst">Du er...</p>
-          <h2 id="dukke-navn">Dukkens navn</h2>        
+        <div id="resultat-skaerm" class="skaerm-sektion" style="display: none">
+          <p class="du-er-tekst">Du er...</p>
+          <h2 id="dukke-navn">Dukkens navn</h2>
 
           <img
             class="dukke-baggrund"
-            src="#" 
+            src="#"
             alt="baggrund på dukke bevæger sig"
             id="dukke-vinger"
           />
 
           <div class="dukke">
-            <img 
-            class="dukke-billede" 
-            src="#" 
-            alt="billede af dukke" 
-            id="dukke-billede">
+            <img
+              class="dukke-billede"
+              src="#"
+              alt="billede af dukke"
+              id="dukke-billede"
+            />
           </div>
 
-          <div class="hvorfor-box" id="hvorfor-knap"> 
+          <div class="hvorfor-box" id="hvorfor-knap">
             <span class="hvorfor-tekst">Hvorfor?</span>
-            <img class="pil-videre" src="img/pil-videre.png" alt="pil videre">
+            <img class="pil-videre" src="img/pil-videre.png" alt="pil videre" />
           </div>
-          
+
           <!--popup-kort med info om dukker-->
           <div id="popup-kort" class="popup-container skjult">
             <div class="popup-indhold">
               <span class="luk-popup" id="luk-popup-knap">&times;</span>
-              
+
               <h2 id="popup-dukke-navn">Dukkens navn</h2>
               <p id="dukke-beskrivelse">Beskrivelse af dukke</p>
-              
-              <button class="tag-billede-knap">
-                <img src="img/kamera-ikon.svg" alt="kamera" class="kamera-ikon">
+
+              <button id="tagBilledeKnap" class="tag-billede-knap">
+                <img
+                  src="img/kamera-ikon.svg"
+                  alt="kamera"
+                  class="kamera-ikon"
+                />
                 Tag billede
               </button>
             </div>
           </div>
-          
+
           <a href="index.html" class="tilbage-knap">
             <span class="tilbage-pil"></span>
-            <img src="img/tilbage.png" alt="tilbage" class="tilbage-forside">
+            <img src="img/tilbage.png" alt="tilbage" class="tilbage-forside" />
             Tilbage til forsiden
           </a>
-        </div> </div> </div> <script src="js/script.js"></script>
+        </div>
+        <!-- Kamera-ramme -->
+        <div id="kamera-skaerm" class="skaerm-sektion" style="display: none">
+          <div class="kamera-ramme">
+            <video id="kamera" autoplay playsinline></video>
+
+            <canvas id="canvas"></canvas>
+
+            <button id="kameraKnap" type="button" class="kamera-knap">
+              <img src="img/kamera.png" alt="Tag billede" />
+            </button>
+          </div>
+
+          <!-- Resultat-visning — UDENFOR kamera-ramme! -->
+          <div class="resultat-visning" id="resultatVisning">
+            <div class="polaroid-wrapper">
+              <img
+                id="tagetBillede"
+                class="taget-billede"
+                alt="Dit billede"
+                src="img/placeholder.png"
+              />
+              <div class="polaroid-bund">
+                <img
+                  src="img/logo.png"
+                  class="polaroid-logo"
+                  alt="Museum Ovartaci logo"
+                />
+              </div>
+            </div>
+            <div class="deling-sektion">
+              <input
+                type="tel"
+                id="telefonInput"
+                class="telefon-input"
+                placeholder="Indtast telefonnummer..."
+              />
+              <button id="delingKnap" type="button" class="deling-knap">
+                <img src="img/del.png" alt="Del" class="deling-ikon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Tilbage-knap -->
+          <a href="index.html" class="tilbage-knap">
+            <span class="tilbage-pil">&#8249;</span>
+            Tilbage til forsiden
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
