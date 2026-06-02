@@ -123,8 +123,8 @@ let scores = { Lulu: 0, Sinhu: 0, Pupparpasta: 0, Verda: 0, Dragen: 0 };
 
 // Starter quizzen
 function startQuiz() {
-  document.getElementById("start-skaerm").classList.remove("aktiv");;
-  document.getElementById("quiz-skaerm").classList.add("aktiv");;
+  document.getElementById("start-skaerm").classList.remove("aktiv");
+  document.getElementById("quiz-skaerm").classList.add("aktiv");
   spgIndex = 0;
   scores = { Lulu: 0, Sinhu: 0, Pupparpasta: 0, Verda: 0, Dragen: 0 }; // Nulstil point
   visSpoergsmaal();
@@ -214,13 +214,12 @@ function visResultat() {
   document.getElementById("dukke-beskrivelse").innerText = dukke.beskrivelse;
 }
 
+// EVENT LISTENERS: Start quiz-knap
 document.addEventListener("DOMContentLoaded", () => {
   const startKnap = document.getElementById("start-quiz-btn");
   if (startKnap) {
     startKnap.addEventListener("click", startQuiz);
   }
-
-// EVENT LISTENERS: Åbner og lukker pop-up
 
   const hvorforKnap = document.getElementById("hvorfor-knap");
   const lukKnap = document.getElementById("luk-popup-knap");
@@ -239,95 +238,4 @@ document.addEventListener("DOMContentLoaded", () => {
       popupKort.style.display = "none";
     });
   }
-});
-
-// Billede skærm
-const video = document.querySelector("#kamera");
-const canvas = document.querySelector("#canvas");
-const ctx = canvas.getContext("2d");
-const kameraKnap = document.querySelector("#kameraKnap");
-const resultatVisning = document.querySelector("#resultatVisning");
-const kameraRamme = document.querySelector(".kamera-ramme");
-const tagetBillede = document.querySelector("#tagetBillede");
-const tagBilledeKnap = document.querySelector("#tagBilledeKnap");
-const resultatSkaerm = document.querySelector("#resultat-skaerm");
-const kameraSkaerm = document.querySelector("#kamera-skaerm");
-const popupKort = document.querySelector("#popup-kort");
-
-const dukke = new Image();
-dukke.src = "img/puppapasta-maske.png";
-
-async function startKamera() {
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: "user" },
-      audio: false,
-    });
-    video.srcObject = stream;
-    video.addEventListener("playing", startPreview);
-  } catch (error) {
-    console.error("Kameraet kunne ikke startes:", error);
-  }
-}
-
-// Tegn live preview på canvas løbende
-function startPreview() {
-  canvas.style.display = "block"; // Vis canvas i stedet for video
-  video.style.display = "none"; // Skjul rå video
-
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
-
-  function tegn() {
-    if (video.paused || video.ended) return;
-
-    // Spejlvendt video
-    ctx.save();
-    ctx.translate(canvas.width, 0);
-    ctx.scale(-1, 1);
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    ctx.restore();
-
-    // Maske ovenpå — samme position hver gang
-    if (dukke.complete) {
-      const w = canvas.width * 0.3;
-      const h = canvas.height * 0.5;
-      const x = canvas.width - w - 160;
-      const y = canvas.height - h;
-
-      ctx.globalAlpha = 1;
-      ctx.drawImage(dukke, x, y, w, h);
-      ctx.globalAlpha = 1;
-    }
-
-    requestAnimationFrame(tegn);
-  }
-
-  tegn();
-}
-
-// Tag billede — frys det nuværende canvas-frame
-kameraKnap.addEventListener("click", () => {
-  if (!video.srcObject) {
-    alert("Kameraet er ikke startet endnu.");
-    return;
-  }
-
-  // Stop live preview
-  video.pause();
-
-  // Canvas viser allerede det frosne billede — sæt det ind i polaroid
-  tagetBillede.src = canvas.toDataURL("image/jpeg", 0.92);
-
-  kameraRamme.style.display = "none";
-  resultatVisning.style.display = "flex";
-});
-
-tagBilledeKnap.addEventListener("click", () => {
-  popupKort.classList.add("skjult");
-
-  resultatSkaerm.style.display = "none";
-  kameraSkaerm.style.display = "block";
-
-  startKamera();
 });
