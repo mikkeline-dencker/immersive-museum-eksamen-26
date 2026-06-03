@@ -51,11 +51,15 @@ body {
 .skaerm-sektion {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   z-index: 5;
+}
+
+.skaerm-sektion.aktiv {
+  display: flex;
 }
 
 /* ================================================
@@ -108,10 +112,6 @@ h1 {
   border: 4px solid #355c7d;
   border-radius: 50px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap; */
 }
 
 /* Det hvide highlight i højre hjørne af knappen */
@@ -261,12 +261,6 @@ h1 {
   margin-left: -30px;
 }
 
-.tilbage-forside-knap img {
-  width: 8px;
-  height: auto;
-  margin-left: -30px;
-}
-
 .progress-container {
   width: 70%;
   height: 12px;
@@ -291,7 +285,6 @@ h1 {
   font-size: 44px;
   color: #345a7c;
   text-align: center;
-  top: 20%;
   margin: 0;
   margin-top: 60px;
 }
@@ -300,7 +293,6 @@ h1 {
   width: 100%;
   max-width: 700px;
   height: auto;
-  top: 10%;
   z-index: 3;
 }
 
@@ -313,7 +305,6 @@ h1 {
   font-size: 44px;
   color: #345a7c;
   text-align: center;
-  top: 20%;
   margin: 0;
   margin-top: 60px;
 }
@@ -554,22 +545,6 @@ h1 {
   opacity: 0.5;
 }
 
-/* Skjul alle skærmene som standard */
-#start-skaerm,
-#quiz-skaerm,
-#vente-side,
-#resultat-skaerm {
-  display: none;
-}
-
-/* Vis kun den aktive skærm */
-#start-skaerm.aktiv,
-#quiz-skaerm.aktiv,
-#vente-side.aktiv,
-#resultat-skaerm.aktiv {
-  display: flex;
-}
-
 /* ================================================
    KAMERA-SKÆRM
    ================================================ */
@@ -609,6 +584,7 @@ h1 {
   justify-content: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  cursor: pointer;
 }
 
 .kamera-ramme video {
@@ -617,21 +593,6 @@ h1 {
 
 .kamera-ramme canvas {
   display: none; /* Skjult indtil billedet tages */
-}
-
-/* Kamera-knap */
-.kamera-knap {
-  width: 85px;
-  height: 55px;
-  background: #8fa4b8;
-  border: 4px solid #345a7c;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  z-index: 2; /* Sørger for at knappen er ovenpå videoen/canvaset */
 }
 
 .kamera-knap img {
@@ -672,7 +633,7 @@ h1 {
   transform: rotate(-5deg);
   width: 62%;
   max-width: 280px;
-  margin-top: -100px;
+  margin-top: -50px;
 }
 
 .taget-billede {
@@ -706,20 +667,7 @@ h1 {
   margin: 0 auto;
   position: relative;
   flex-wrap: nowrap;
-}
-
-.deling-sektion::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 110px;
-  width: 14px;
-  height: 5px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 100%;
-  transform: rotate(30deg);
-  z-index: 6;
-  opacity: 0.5;
+  margin-top: -35px;
 }
 
 .telefon-input {
@@ -754,6 +702,7 @@ h1 {
   justify-content: center;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
   z-index: 2; /* Sørger for at knappen er ovenpå videoen/canvaset */
+  cursor: pointer;
 }
 
 .deling-knap .deling-ikon {
