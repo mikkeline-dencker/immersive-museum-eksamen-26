@@ -45,6 +45,9 @@ Vores ORCA-overvejelser afspejler sig direkte i vores JavaScript-kode:
   * `navn`, `billede` og `beskrivelse` er af datatypen **String** (tekst), da det er faste værdier og stier.
   * Vores pointsystem arbejder med datatypen **Number** (tal), når vi tæller pointene sammen for at finde en vinder.
   * Vores spørgsmål (`spg`) er gemt i et **Array** (en liste), som indeholder **Objekter** (hvor dataen er parret i par).
+* **Vores data mapping fra ORCA til koden:** Når vi flytter vores planlægning fra ORCA-tabellen og over i JavaScript-filen, gør vi det på denne måde:
+  * De overordnede **Objekter** fra vores tabel (som f.eks. "Dukke") har vi lavet om til rigtige JavaScript-objekter med krøllede parenteser `{}` i koden.
+  * De **Attributter**, som vi fandt frem til hørte under hvert objekt i tabellen, er skrevet ind som egenskaber (properties) inde i objekterne. Det er derfor, at dukkens attributter i koden blot hedder `navn:`, `billede:` og `beskrivelse:`.
 
 ---
 
@@ -72,7 +75,7 @@ For at vise, hvordan vores app fungerer i praksis, har vi udvalgt et par central
 ### 1. Kode-eksempel: LocalStorage (Fra JavaScript)
 Her er koden, der sørger for, at resultatskærmen gemmer vinderen, så kamera-skærmen kan huske den bagefter:
 
-```javescript
+```javascript
 // Gemmer resultat i localstorage
 
 localStorage.setItem("quizVinder", winner);
@@ -122,7 +125,7 @@ Vi har gjort meget ud af at lave kommentarer i alle vores filer. (<!- --> i HTML
 // Tag billede — frys det nuværende canvas-frame
 ```
 * Forklare over for os selv og hinanden, hvad de sværeste funktioner gør, især inde i kamera-koden, som vi fik tilsendt af vores lærer.
-* Gøre det nemt for andre at læse vores kode, uden at skulle gætte sig til, hvad de forskellige varialer gør.
+* Gøre det nemt for andre at læse vores kode, uden at skulle gætte sig til, hvad de forskellige variabler gør.
 ___
 
 
@@ -158,7 +161,7 @@ Vi har undervejs i projektet brugt AI (f.eks. ChatGPT/Gemini & CoPilot) som en d
 
 For at sikre, at vores kode er fejlfri, følger de officielle webstandarder og ikke har glemte tags eller skjulte fejl, har vi kørt vores filer igennem de officielle valideringsværktøjer (W3C Validators):
 * **HTML:** Vores index.html er blevet valideret med W3C Markup Validation Service 
-([Markdown Live Preview](https://validator.w3.org/nu/#textarea)). Koden er godkendt uden fejl, dog er der noget info om at vi ikke behøver skråstreg i slutningen af et (`<img>`)-tag (f.eks. `<img src="img/forside.gif" alt="forside gif" class="forside-gif" />`)("Document checking completed. No errors or warnings to show.").
+([Markdown Live Preview](https://validator.w3.org/nu/#textarea)). Koden er godkendt uden fejl ("Document checking completed. No errors or warnings to show."), dog er der noget info om at vi ikke behøver skråstreg i slutningen af et (`<img>`)-tag f.eks. (`<img src="img/forside.gif" alt="forside gif" class="forside-gif" />`).
 * **CSS:** Vores style.css er blevet valideret med W3C CSS Validation Service (Jigsaw) ([Markdown Live Preview](https://jigsaw.w3.org/css-validator/validator)). Alt layout og iPad-styling er godkendt uden fejl.
 
 #### HTML-validering:
