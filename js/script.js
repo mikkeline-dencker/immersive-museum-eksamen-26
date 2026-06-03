@@ -191,8 +191,7 @@ function visResultat() {
   localStorage.setItem("quizVinder", winner);
 
   // Henter den vindende dukke
-  let gemtVinder = localStorage.getItem("quizVinder");
-  const dukke = dukker[gemtVinder];
+  const dukke = dukker[winner];
 
   // Viser dukke-navn på resultatskærmen
   document.getElementById("dukke-navn").innerText = dukke.navn;
@@ -223,7 +222,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const hvorforKnap = document.getElementById("hvorfor-knap");
   const lukKnap = document.getElementById("luk-popup-knap");
-  const popupKort = document.getElementById("popup-kort");
 
   // Når man klikker på "Hvorfor?", vises pop-up som et flex-element ovenpå alt andet
   if (hvorforKnap && popupKort) {
@@ -304,9 +302,7 @@ function startPreview() {
       const x = canvas.width - w - 160;
       const y = canvas.height - h;
 
-      ctx.globalAlpha = 1;
       ctx.drawImage(dukkeOverlay, x, y, w, h);
-      ctx.globalAlpha = 1;
     }
 
     requestAnimationFrame(tegn);
@@ -341,3 +337,13 @@ tagBilledeKnap.addEventListener("click", () => {
   opdaterKameraDukke();
   startKamera();
 });
+
+// Telefon inputvalidering - kun tal tilladt
+const telefonInput = document.querySelector("#telefonInput");
+if (telefonInput) {
+  telefonInput.addEventListener("input", (e) => {
+    // Trim og fjern alt der ikke er tal
+    let value = e.target.value.trim();
+    e.target.value = value.replace(/[^0-9]/g, "");
+  });
+}
