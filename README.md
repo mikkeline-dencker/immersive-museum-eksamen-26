@@ -31,7 +31,7 @@ For at få styr på alt indholdet i quizzen, har vi brugt en OOUX og ORCA-tabel 
 * **Dukke / Resultat**
 * **Kamera-funktionen**
 
-### ORCA-Tabel
+#### ORCA-Tabel
 
 ![ORCA-tabel](/img/orca-tabel.png)
 
@@ -63,10 +63,40 @@ Det gør, at vi kan binde quizzen og kameraet sammen, så koden automatisk ved, 
 
 ## 4. Tredjeparts-biblioteker
 
-For at holde vores prototype så hurtig, let og optimeret som muligt, har vi valgt **ikke**at anvende nogen tredjeparts-biblioteker. Alt funktionalitet og logik er skrevet i helt ren JavaScript, så det kører hurtigt på skærmen.
+For at holde vores prototype så hurtig, let og optimeret som muligt, har vi valgt **ikke** at anvende nogen tredjeparts-biblioteker. Alt funktionalitet og logik er skrevet i helt ren JavaScript, så det kører hurtigt på skærmen.
 * **Kamera-koden:** Selve den grundlæggende kode til at åbne for kameraet og få dukken vist på skærmen er noget, vi har fået udleveret af vores programmerings-lærer. Vores opgave har herfra været at forstå koden, style kamera-skærmen i CSS, og programmere det så vinder-dukken automatisk bliver hentet over som et filter.
 * **Design-ressourcer:** Vi har brugt *Google Fonts* til at hente skrifttyperne `Yrsa` og `Afacad` ind i vores HTML-header, så teksten passer til Museum Ovartacis visuelle stil.
 
+---
+
 ## 5. GitHub Samarbejde
 
-Mangler
+At arbejde sammen om koden var en udfordring til at starte med, da vi lige skulle lære at samarbejde på GitHub. I begyndelsen fik vi lavet lidt rod i koden, fordi vi ikke helt havde forstået, at man ikke bare kan rette i de samme filer på samme tid. Men så snart vi fandt ud af, hvordan systemet fungerede, kørte det rigtig fint.
+* **Commits:** Vi har arbejdet med meningsfulde commits undervejs. Det vil sige, at vi har givet vores commits korte, passende navne og tilføjet en lille beskrivelse af, hvad der faktisk er blevet ændret i koden (f.eks. "feat: tilføjet pointsystem" eller "fix: rettet styling af polaroid-ramme").
+* **Arbejdsform:** Vi mødtes fysisk hver gang vi skulle kode, for at sikre, at vi snakkede godt sammen og kunne hjælpe hinanden. Efter vores startproblemer fandt vi hurtigt ud af, hvordan man kan *branche* og *merge* sit arbejde. For at være på den helt sikre side og undgå at lave fejl i fælles-koden ved et uheld, valgte vi dog en meget sikker løsning: Vi havde hver især vores eget repository (arbejdsmappe) på GitHub, hvor vi testede ting af, og så kopierede vi først koden over i det fælles projekt, når vi var helt sikre på, at det virkede.
+* **Hjemme-arbejde:** Vi ville give hinanden hjemme-opgaver med kodning, for at få optimeret tiden, så meget som muligt. Når vi mødtes igen, ville vi gennemgå koden, og sørge for at alt var som det skulle være.
+
+---
+
+## 6. Brug af AI-værktøjer
+
+Vi har undervejs i projektet brugt AI (f.eks. ChatGPT/Gemini & CoPilot) som en digital makker og hjælp til koden. Vi har primært brugt det til:
+* **Fejlsøgning:** Til at finde fejl i vores JavaScript og CSS, hvis noget ikke virkede, eller hvis kameraet drillede.
+* **Forklaringer:** Vi brugte AI til at skære kamera-koden ud i pap for os. Da vi ikke havde haft om kamera-funktioner og canvas i undervisningen før, var det et helt nyt emne, så AI hjalp os med at forstå, hvad de forskellige linjer i koden faktisk gjorde.
+* **Optimering:** Til at gøre vores egen kode mere ren og overskuelig (CoPilot er primært brugt her).
+
+**Al kode er efterfølgende tilpasset, testet og implementeret af os selv, så vi har fuld forståelse for, hvordan løsningen fungerer.**
+
+---
+
+## 7. Kode-validering
+
+For at sikre, at vores kode er fejlfri, følger de officielle webstandarder og ikke har glemte tags eller skjulte fejl, har vi kørt vores filer igennem de officielle valideringsværktøjer (W3C Validators):
+* **HTML:** Vores index.html er blevet valideret med W3C Markup Validation Service 
+([Markdown Live Preview](https://validator.w3.org/nu/#textarea)). Koden er godkendt uden fejl, dog er der noget info om at vi ikke behøver skråstreg i slutningen af et (`<img>`)-tag (f.eks. `<img src="img/forside.gif" alt="forside gif" class="forside-gif" />`)("Document checking completed. No errors or warnings to show.").
+* **CSS:** Vores style.css er blevet valideret med W3C CSS Validation Service (Jigsaw) ([Markdown Live Preview](https://jigsaw.w3.org/css-validator/validator)). Alt layout og iPad-styling er godkendt uden fejl.
+
+#### HTML-validering:
+![HTML-validering](/img/html-vali.png)
+#### CSS-validering:
+![CSS-validering](/img/css-vali.png)
