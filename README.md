@@ -38,9 +38,13 @@ For at få styr på alt indholdet i quizzen, har vi brugt en OOUX og ORCA-tabel 
 ### Fra ORCA til JavaScript Datastruktur
 
 Vores ORCA-overvejelser afspejler sig direkte i vores JavaScript-kode:
-* **`spg` (Array af Objekter):** Linker direkte til vores **Spørgsmål-objekt**. Det indeholder en string med selve spørgsmåls-teksten og et array af svarmuligheder, som hver linker til en specifik dukke.
-* **`dukker` (Objekt):** Fungerer som vores database over **Dukke-objektet**. Her er hver enkelt dukke gemt med sine tilhørende attributter som faste datatyper (`navn`, `billede` og `beskrivelse` som strings).
-* **Attributter:** Vi bruger variabler som let `spgIndex = 0` (til at tælle hvilket spørgsmål man er på) og `scores` (til at tælle pointene sammen). De ligger øverst i vores JavaScript-fil, så koden hele tiden kan holde øje med, hvor langt brugeren er i quizzen, og sørge for at opdatere vores progress bar i HTML'en
+* **`spg` (Array af Objekter):** Linker direkte til vores **Spørgsmål-objekt**. Det indeholder en **string** med selve spørgsmåls-teksten og et **array** af svarmuligheder, som hver linker til en specifik dukke.
+* **`dukker` (Objekt):** Fungerer som vores database over **Dukke-objektet**. Her er hver enkelt dukke gemt med sine tilhørende attributter.
+* **Attributter:** Vi bruger variabler som `let spgIndex = 0` (til at tælle hvilket spørgsmål man er på) og `scores` (til at tælle pointene sammen). De ligger øverst i vores JavaScript-fil, så koden hele tiden kan holde øje med, hvor langt brugeren er i quizzen, og sørge for at opdatere vores progress bar i HTML'en
+* **Vores konkrete datatyper:** For at computeren kan forstå vores data, har vi brugt specifikke datatyper i vores `dukker`-database:
+  * `navn`, `billede` og `beskrivelse` er af datatypen **String** (tekst), da det er faste værdier og stier.
+  * Vores pointsystem arbejder med datatypen **Number** (tal), når vi tæller pointene sammen for at finde en vinder.
+  * Vores spørgsmål (`spg`) er gemt i et **Array** (en liste), som indeholder **Objekter** (hvor dataen er parret i par).
 
 ---
 
@@ -61,7 +65,68 @@ Det gør, at vi kan binde quizzen og kameraet sammen, så koden automatisk ved, 
 
 ---
 
-## 4. Tredjeparts-biblioteker
+## 4. Udvalgt kode og kommentarer
+
+For at vise, hvordan vores app fungerer i praksis, har vi udvalgt et par centrale stykker kode fra vores projekt.
+
+### 1. Kode-eksempel: LocalStorage (Fra JavaScript)
+Her er koden, der sørger for, at resultatskærmen gemmer vinderen, så kamera-skærmen kan huske den bagefter:
+
+```javescript
+// Gemmer resultat i localstorage
+
+localStorage.setItem("quizVinder", winner);
+```
+* Linjen `localStorage.setItem` gemmer vinderen af quizzen i browseren under navnet `"quizVinder"`. På den måde husker computeren resultatet, så vi kan hente det frem igen, når vi skifter over til kamera-skærmen.
+
+### 2. Kode-eksempel: Vis/skjul skærme (Fra CSS)
+Dette er den CSS-kode, vi tænder og slukker for via JavaScript, når brugeren trykker på en knap for at skifte skærm:
+
+```css
+/* Standardskærmen er skjult */
+.skaerm {
+  display: none;
+}
+
+/* Når skærmen får klassen .aktiv, bliver den vist på iPad'en */
+.skaerm.aktiv {
+  display: flex;
+}
+```
+* Ved at bruge `display: none` som standard, er alle vores 5-6 skærm-sektioner usynlige i starten. Først når vi tilføjer klassen `.aktiv`, dukker skærmen op.
+
+### 3. Kommentarer i koden (HTML, CSS & JS)
+Vi har gjort meget ud af at lave kommentarer i alle vores filer. (<!- --> i HTML, /* */ i CSS & // i JS)
+* Dele vores filer op i overskuelige sektioner, f.eks. 
+#### css
+```css
+/* ================================================
+                     FORSIDE
+   ================================================ */
+
+/* ================================================
+            TILBAGE-KNAP OG PROGRESS BAR
+   ================================================ */
+
+/* ================================================
+            DUKKE-BILLEDE INDIVIDUAL STYLING
+   ================================================ */
+   ```
+#### js
+``` javascript
+
+// Array med spg og svar
+
+// Opdaterer progress bar
+
+// Tag billede — frys det nuværende canvas-frame
+```
+* Forklare over for os selv og hinanden, hvad de sværeste funktioner gør, især inde i kamera-koden, som vi fik tilsendt af vores lærer.
+* Gøre det nemt for andre at læse vores kode, uden at skulle gætte sig til, hvad de forskellige varialer gør.
+___
+
+
+## 5. Tredjeparts-biblioteker
 
 For at holde vores prototype så hurtig, let og optimeret som muligt, har vi valgt **ikke** at anvende nogen tredjeparts-biblioteker. Alt funktionalitet og logik er skrevet i helt ren JavaScript, så det kører hurtigt på skærmen.
 * **Kamera-koden:** Selve den grundlæggende kode til at åbne for kameraet og få dukken vist på skærmen er noget, vi har fået udleveret af vores programmerings-lærer. Vores opgave har herfra været at forstå koden, style kamera-skærmen i CSS, og programmere det så vinder-dukken automatisk bliver hentet over som et filter.
@@ -69,7 +134,7 @@ For at holde vores prototype så hurtig, let og optimeret som muligt, har vi val
 
 ---
 
-## 5. GitHub Samarbejde
+## 6. GitHub Samarbejde
 
 At arbejde sammen om koden var en udfordring til at starte med, da vi lige skulle lære at samarbejde på GitHub. I begyndelsen fik vi lavet lidt rod i koden, fordi vi ikke helt havde forstået, at man ikke bare kan rette i de samme filer på samme tid. Men så snart vi fandt ud af, hvordan systemet fungerede, kørte det rigtig fint.
 * **Commits:** Vi har arbejdet med meningsfulde commits undervejs. Det vil sige, at vi har givet vores commits korte, passende navne og tilføjet en lille beskrivelse af, hvad der faktisk er blevet ændret i koden (f.eks. "feat: tilføjet pointsystem" eller "fix: rettet styling af polaroid-ramme").
@@ -78,7 +143,7 @@ At arbejde sammen om koden var en udfordring til at starte med, da vi lige skull
 
 ---
 
-## 6. Brug af AI-værktøjer
+## 7. Brug af AI-værktøjer
 
 Vi har undervejs i projektet brugt AI (f.eks. ChatGPT/Gemini & CoPilot) som en digital makker og hjælp til koden. Vi har primært brugt det til:
 * **Fejlsøgning:** Til at finde fejl i vores JavaScript og CSS, hvis noget ikke virkede, eller hvis kameraet drillede.
@@ -89,7 +154,7 @@ Vi har undervejs i projektet brugt AI (f.eks. ChatGPT/Gemini & CoPilot) som en d
 
 ---
 
-## 7. Kode-validering
+## 8. Kode-validering
 
 For at sikre, at vores kode er fejlfri, følger de officielle webstandarder og ikke har glemte tags eller skjulte fejl, har vi kørt vores filer igennem de officielle valideringsværktøjer (W3C Validators):
 * **HTML:** Vores index.html er blevet valideret med W3C Markup Validation Service 
