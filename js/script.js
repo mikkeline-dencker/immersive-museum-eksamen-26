@@ -299,7 +299,7 @@ function startPreview() {
     if (dukkeOverlay.complete) {
       const w = canvas.width * 0.3;
       const h = canvas.height * 0.5;
-      const x = canvas.width - w - 50;
+      const x = canvas.width - w - 160;
       const y = canvas.height - h;
 
       ctx.drawImage(dukkeOverlay, x, y, w, h);
