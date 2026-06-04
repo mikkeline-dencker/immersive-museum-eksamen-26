@@ -148,7 +148,7 @@ At arbejde sammen om koden var en udfordring til at starte med, da vi lige skull
 
 ## 7. Brug af AI-værktøjer
 
-Vi har undervejs i projektet brugt AI (f.eks. ChatGPT/Gemini & CoPilot) som en digital makker og hjælp til koden. Vi har primært brugt det til:
+Vi har undervejs i projektet brugt AI (f.eks. **ChatGPT/Gemini & CoPilot**) som en digital makker og hjælp til koden. Vi har primært brugt det til:
 * **Fejlsøgning og logik i JavaScript:** Da vi skulle have pointsystemet og overgangen mellem spørgsmålene til at fungere helt fejlfrit, brugte vi **Gemini** til at få forklaret, hvordan vi bedst kunne løse problemet. Den hjalp os med at få styr på logikken og strukturere vores funktioner rigtigt.
     * **Prompt til js:** Google (2026) Gemini, Quiz med JavaScript, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/d1c7a66c8f8f) (Hentet: 29. maj 2026).
 * **Visuelle effekter og CSS-styling:** For at give vores quiz-knapper et ekstra professionelt løft, spurgte vi **Gemini** om, hvordan man laver en glans-effekt (glossy overlay) i ren CSS. Derudover fik vi hjælp til at finjustere billedstørrelserne, så layoutet ikke rykkede sig på iPad-skærmen.
