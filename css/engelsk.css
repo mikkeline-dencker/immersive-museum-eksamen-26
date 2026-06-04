@@ -1,22 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ebe4d2; /* Beige baggrund udenfor iPad */
+  background-color: #ebe4d2; /* Beige background outside iPad */
   overflow: hidden;
 }
 
 /* ================================================
-    CONTAINER OG GENERELLE STYLING + TILPASNING TIL IPAD SKÆRM
+    CONTAINER AND GENERAL STYLING + iPad SCREEN ADAPTATION
    ================================================ */
 
-/* Låser formatet til en iPad på højkant*/
+/* Locks the format to a portrait iPad */
 .container-ipad {
   height: 100vh;
-  max-height: 1024px; /* Må aldrig blive højere end en iPad */
+  max-height: 1024px; /* Must never be taller than an iPad */
   aspect-ratio: 3 / 4;
-  margin: 0 auto; /* Centrerer kassen på computerskærmen */
+  margin: 0 auto; /* Centers the box on the computer screen */
 
-  /* Baggrundsbillede */
+  /* Background image */
   background-image: url("../img/baggrund.png");
   background-size: cover;
   background-position: center;
@@ -32,8 +32,8 @@ body {
   overflow: hidden;
 }
 
-/* Boksen med indholdet */
-.hvid-boks {
+/* The box with content */
+.white-box {
   width: 90%;
   height: 90%;
   background-color: rgba(255, 255, 255, 0.81);
@@ -47,8 +47,8 @@ body {
   overflow: hidden;
 }
 
-/* Container til de tre forskellige skærm-sektioner */
-.skaerm-sektion {
+/* Container for the three different screen sections */
+.screen-section {
   width: 100%;
   height: 100%;
   display: none;
@@ -58,12 +58,12 @@ body {
   z-index: 5;
 }
 
-.skaerm-sektion.aktiv {
+.screen-section.active {
   display: flex;
 }
 
 /* ================================================
-   FORSIDE
+   FRONTPAGE
    ================================================ */
 
 h1 {
@@ -75,11 +75,11 @@ h1 {
   text-align: center;
 }
 
-.du {
-  color: #d25d1e; /* Den orange Ovartaci-farve */
+.you {
+  color: #d25d1e; /* The orange Ovartaci colour */
 }
 
-.undertekst {
+.subtext {
   font-family: yrsa, sans-serif;
   font-size: 25px;
   color: #345a7c;
@@ -89,15 +89,15 @@ h1 {
   padding: 0 60px;
 }
 
-/* Forside styling */
-.forside-gif {
+/* Frontpage styling */
+.frontpage-gif {
   width: 80%;
   max-width: 700px;
   height: auto;
   z-index: 3;
 }
 
-.start-knap {
+.start-button {
   position: relative;
   z-index: 4;
   top: -20px;
@@ -114,8 +114,8 @@ h1 {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Det hvide highlight i højre hjørne af knappen */
-.start-knap::after {
+/* The white highlight in the top right corner of the button */
+.start-button::after {
   content: "";
   position: absolute;
   top: 12px;
@@ -128,7 +128,7 @@ h1 {
   opacity: 0.5;
 }
 
-.haand {
+.hand {
   width: 10%;
   max-width: 700px;
   height: auto;
@@ -136,10 +136,10 @@ h1 {
   position: relative;
   left: 180px;
   margin-top: -60px;
-  animation: haand-puls 1.4s ease-in-out infinite;
+  animation: hand-pulse 1.4s ease-in-out infinite;
 }
 
-@keyframes haand-puls {
+@keyframes hand-pulse {
   0%,
   100% {
     transform: scale(1);
@@ -149,7 +149,7 @@ h1 {
   }
 }
 
-.uk-flag-btn {
+.dk-flag-btn {
     position: absolute;
     width: 44px;
     top: 92%;
@@ -161,10 +161,10 @@ h1 {
 }
 
 /* ================================================
-   SPØRGSMÅL OG SVAR-KNAPPER
+   QUESTIONS AND ANSWER BUTTONS
    ================================================ */
 
-#spg-tekst {
+#question-text {
   font-family: yrsa, sans-serif;
   font-size: 36px;
   color: #345a7c;
@@ -173,7 +173,7 @@ h1 {
   height: 70px;
 }
 
-.quiz-svarknap {
+.quiz-answer-button {
   position: relative;
   z-index: 4;
   top: -80px;
@@ -190,17 +190,17 @@ h1 {
   max-width: 650px;
   margin: 10px auto;
   width: 75%;
-  height: 75px; /* alle knapper bliver lige høje */
+  height: 75px; /* all buttons become the same height */
   display: flex;
-  align-items: center; /* centrerer lodret */
-  justify-content: center; /* centrerer vandret */
+  align-items: center; /* centres vertically */
+  justify-content: center; /* centres horizontally */
   text-align: center;
   line-height: 1.3;
   flex-shrink: 0;
 }
 
-/* Container for svar-knapper */
-#svar-knap-container {
+/* Container for answer buttons */
+#answer-button-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,8 +209,8 @@ h1 {
   flex: 1;
 }
 
-/* Det hvide highlight i højre hjørne af knappen */
-.quiz-svarknap::after {
+/* The white highlight in the top right corner of the button */
+.quiz-answer-button::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -224,11 +224,11 @@ h1 {
 }
 
 /* ================================================
-   TILBAGE-KNAP OG PROGRESS BAR
+   BACK BUTTON AND PROGRESS BAR
    ================================================ */
 
-/* Tilbage-knap */
-.tilbage-knap {
+/* Back button */
+.back-button {
   position: absolute;
   bottom: 25px;
   left: 50%;
@@ -245,15 +245,15 @@ h1 {
   align-items: center;
   gap: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  z-index: 15;
+  z-index: 3;
 }
 
-.tilbage-pil {
+.back-arrow {
   font-size: 22px;
   font-weight: bold;
 }
 
-.tilbage-knap::after {
+.back-button::after {
   content: "";
   position: absolute;
   top: 8px;
@@ -266,7 +266,7 @@ h1 {
   opacity: 0.5;
 }
 
-.tilbage-forside {
+.back-frontpage {
   width: 8px;
   height: auto;
   margin-left: -30px;
@@ -288,10 +288,10 @@ h1 {
 }
 
 /* ================================================
-    VENTE-SKÆRM
+    WAIT SCREEN
    ================================================ */
 
-.du-er {
+.you-are {
   font-family: yrsa, sans-serif;
   font-size: 44px;
   color: #345a7c;
@@ -300,7 +300,7 @@ h1 {
   margin-top: 60px;
 }
 
-.vente-gif {
+.wait-gif {
   width: 100%;
   max-width: 700px;
   height: auto;
@@ -308,10 +308,10 @@ h1 {
 }
 
 /* ================================================
-   RESULTAT-SKÆRM
+   RESULT SCREEN
    ================================================ */
 
-.du-er-tekst {
+.you-are-text {
   font-family: yrsa, sans-serif;
   font-size: 44px;
   color: #345a7c;
@@ -320,7 +320,7 @@ h1 {
   margin-top: 60px;
 }
 
-#dukke-navn {
+#puppet-name {
   font-family: yrsa, sans-serif;
   font-size: 55px;
   color: #345a7c;
@@ -329,7 +329,7 @@ h1 {
   margin-top: -20px;
 }
 
-.dukke {
+.puppet {
   position: relative;
   width: 100%;
   flex: 1;
@@ -339,7 +339,7 @@ h1 {
   margin-bottom: 110px;
 }
 
-.lulu-baggrund {
+.lulu-background {
   position: absolute;
   width: 80%;
   height: auto;
@@ -348,7 +348,7 @@ h1 {
   z-index: 3;
 }
 
-.sinhu-baggrund {
+.sinhu-background {
   position: absolute;
   width: 100%;
   height: auto;
@@ -357,7 +357,7 @@ h1 {
   z-index: 4;
 }
 
-.pupparpasta-baggrund {
+.pupparpasta-background {
   position: absolute;
   width: 50%;
   height: auto;
@@ -366,7 +366,7 @@ h1 {
   z-index: 4;
 }
 
-.verda-baggrund {
+.verda-background {
   position: absolute;
   width: 100%;
   height: auto;
@@ -375,7 +375,7 @@ h1 {
   z-index: 4;
 }
 
-.dragen-baggrund {
+.dragen-background {
   position: absolute;
   width: 100%;
   height: auto;
@@ -385,7 +385,7 @@ h1 {
   transform: translateY(-30px);
 }
 
-.hvorfor-box {
+.why-box {
   width: calc(100% + 90px);
   margin-left: -40px;
   margin-right: -40px;
@@ -402,27 +402,27 @@ h1 {
   cursor: pointer;
 }
 
-.hvorfor-box:hover {
+.why-box:hover {
   background-color: #b0bdc7;
 }
 
-.hvorfor-tekst {
+.why-text {
   font-family: yrsa, sans-serif;
   font-size: 50px;
   color: #345a7c;
   margin: 0;
 }
 
-.pil-videre {
+.arrow-next {
   width: 50px;
   height: auto;
 }
 
 /* ================================================
-   DUKKE-BILLEDE INDIVIDUAL STYLING
+   PUPPET IMAGE INDIVIDUAL STYLING
    ================================================ */
 
-.lulu-billede {
+.lulu-image {
   width: 50%;
   top: 100px;
   height: auto;
@@ -430,34 +430,34 @@ h1 {
   transform: translateY(-80px);
 }
 
-.sinhu-billede {
+.sinhu-image {
   width: 40%;
   height: auto;
   z-index: 4;
 }
 
-.pupparpasta-billede {
+.pupparpasta-image {
   width: 35%;
   height: auto;
   z-index: 4;
   transform: translateY(-25px);
 }
 
-.verda-billede {
+.verda-image {
   width: 50%;
   height: auto;
   z-index: 4;
   transform: translateY(-20px);
 }
 
-.dragen-billede {
+.dragen-image {
   width: 55%;
   height: auto;
   z-index: 4;
   transform: translateY(-20px);
 }
 
-.skjult {
+.hidden {
   display: none;
 }
 
@@ -465,22 +465,22 @@ h1 {
    POP-UP CARDS
    ================================================ */
 
-/* Containeren starter som skjult */
+/* Container starts hidden */
 .popup-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /*Gør baggrunden lidt mørkere*/
+  background-color: rgba(0, 0, 0, 0.3); /* Darkens the background slightly */
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 9;
 }
 
-/* Pop-up indhold */
-.popup-indhold {
+/* Pop-up content */
+.popup-content {
   background-color: #c1cdda;
   width: 85%;
   max-width: 500px;
@@ -494,8 +494,8 @@ h1 {
   align-items: center;
 }
 
-/* Luk-kryds for at lukke pop-up */
-.luk-popup {
+/* Close cross to close pop-up */
+.close-popup {
   position: absolute;
   top: 25px;
   right: 30px;
@@ -507,16 +507,16 @@ h1 {
   z-index: 10;
 }
 
-/* Navn på dukke */
-#popup-dukke-navn {
+/* Puppet name */
+#popup-puppet-name {
   font-family: yrsa, sans-serif;
   font-size: 55px;
   color: #345a7c;
   margin: 10px 0 20px 0;
 }
 
-/* Beskrivelsesteksten */
-#dukke-beskrivelse {
+/* Description text */
+#puppet-description {
   font-family: yrsa, sans-serif;
   font-size: 24px;
   color: #345a7c;
@@ -524,8 +524,8 @@ h1 {
   margin: 0 0 30px 0;
 }
 
-/* Tag billede-knappen i bunden af kortet */
-.tag-billede-knap {
+/* Take picture button at the bottom of the card */
+.take-picture-button {
   background-color: #3e6382;
   color: white;
   border: 3px solid #294861;
@@ -542,8 +542,8 @@ h1 {
   position: relative;
 }
 
-/* Den hvide glans detalje på knappen */
-.tag-billede-knap::after {
+/* The white gloss detail on the button */
+.take-picture-button::after {
   content: "";
   position: absolute;
   top: 6px;
@@ -557,10 +557,10 @@ h1 {
 }
 
 /* ================================================
-   KAMERA-SKÆRM
+   CAMERA SCREEN
    ================================================ */
 
-.kamera-ramme {
+.camera-frame {
   width: 80%;
   height: 85%;
   background: transparent;
@@ -572,15 +572,15 @@ h1 {
   margin-left: 50px;
 }
 
-.kamera-ramme video,
-.kamera-ramme canvas {
+.camera-frame video,
+.camera-frame canvas {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.kamera-knap {
+.camera-button {
   position: absolute;
   bottom: 15px;
   left: 50%;
@@ -598,20 +598,20 @@ h1 {
   cursor: pointer;
 }
 
-.kamera-ramme video {
+.camera-frame video {
   transform: scaleX(-1);
 }
 
-.kamera-ramme canvas {
-  display: none; /* Skjult indtil billedet tages */
+.camera-frame canvas {
+  display: none; /* Hidden until picture is taken */
 }
 
-.kamera-knap img {
+.camera-button img {
   width: 30px;
   height: 29px;
 }
 
-.kamera-knap::after {
+.camera-button::after {
   content: "";
   position: absolute;
   top: 8px;
@@ -624,9 +624,9 @@ h1 {
   opacity: 0.5;
 }
 
-/* ── Resultat-visning ── */
-.resultat-visning {
-  display: none; /* Skjult indtil billede er taget */
+/* ── Result display ── */
+.result-display {
+  display: none; /* Hidden until picture is taken */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -635,7 +635,7 @@ h1 {
   gap: 70px;
 }
 
-/* Polaroid-kort */
+/* Polaroid card */
 .polaroid-wrapper {
   background: #fff;
   padding: 14px 14px 0 14px;
@@ -647,7 +647,7 @@ h1 {
   margin-top: -50px;
 }
 
-.taget-billede {
+.taken-picture {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
@@ -655,7 +655,7 @@ h1 {
   border-radius: 2px;
 }
 
-.polaroid-bund {
+.polaroid-bottom {
   padding: 10px 6px 12px;
   text-align: center;
 }
@@ -668,8 +668,8 @@ h1 {
   margin: 0 auto;
 }
 
-/* Deling-sektion */
-.deling-sektion {
+/* Sharing section */
+.sharing-section {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -681,7 +681,7 @@ h1 {
   margin-top: -35px;
 }
 
-.telefon-input {
+.phone-input {
   flex: 1;
   min-width: 0;
   height: 55px;
@@ -697,12 +697,12 @@ h1 {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-.telefon-input::placeholder {
+.phone-input::placeholder {
   color: #fff;
   font-family: Yrsa, sans-serif;
 }
 
-.deling-knap {
+.sharing-button {
   width: 85px;
   height: 55px;
   background: #8fa4b8;
@@ -712,18 +712,18 @@ h1 {
   align-items: center;
   justify-content: center;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  z-index: 2; /* Sørger for at knappen er ovenpå videoen/canvaset */
+  z-index: 2;
   cursor: pointer;
 }
 
-.deling-knap .deling-ikon {
+.sharing-button .sharing-icon {
   width: 24px;
   height: 24px;
   object-fit: contain;
   display: block;
 }
 
-.deling-knap::after {
+.sharing-button::after {
   content: "";
   position: absolute;
   top: 10px;

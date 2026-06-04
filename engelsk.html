@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Museum Ovartaci - Quiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gotu&family=Jua&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/engelsk.css" />
+  </head>
+
+  <body>
+    <div class="container-ipad">
+      <div class="white-box">
+        <div id="start-screen" class="screen-section active">
+          <h1>Which puppet are <span class="you">you?</span></h1>
+          <div class="subtext">
+            <p>
+              Take the quiz and find out which of Ovartaci's puppets you resemble the most.
+            </p>
+          </div>
+          <img
+            src="img/forside.gif"
+            alt="frontpage gif"
+            class="frontpage-gif"
+          />
+          <button class="start-button" id="start-quiz-btn">Start Quiz</button>
+          <img src="img/haand.png" alt="hand" class="hand" />
+          <a href="index.html">
+          <img src="img/dk.svg" alt="Danish flag" class="dk-flag-btn">
+          </a>
+        </div>
+
+
+        <!--quiz screen-->
+        <div id="quiz-screen" class="screen-section">
+          <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+
+          <h2 id="question-text">Question</h2>
+
+          <div id="answer-button-container"></div>
+
+          <!-- Back button -->
+          <a href="engelsk.html" class="back-button">
+            <span class="back-arrow"></span>
+            <img src="img/tilbage.png" alt="back" class="back-frontpage" />
+            Back to frontpage
+          </a>
+        </div>
+
+        <!--loading screen-->
+        <div id="wait-screen" class="screen-section">
+          <div class="you-are"><p>You are...</p></div>
+          <img src="img/vente.gif" alt="wait gif" class="wait-gif" />
+        </div>
+
+        <!--result screen-->
+        <div id="result-screen" class="screen-section">
+          <p class="you-are-text">You are...</p>
+          <h2 id="puppet-name">Puppet's name</h2>
+
+          <img
+            class="puppet-background"
+            src="#"
+            alt="puppet background moving"
+            id="puppet-wings"
+          />
+
+          <div class="puppet">
+            <img
+              class="puppet-image"
+              src="#"
+              alt="puppet image"
+              id="puppet-image"
+            />
+          </div>
+
+          <div class="why-box" id="why-button">
+            <span class="why-text">Why?</span>
+            <img class="arrow-next" src="img/pil-videre.png" alt="arrow next" />
+          </div>
+
+          <!--popup card with puppet info-->
+          <div id="popup-card" class="popup-container hidden">
+            <div class="popup-content">
+              <span class="close-popup" id="close-popup-button">&times;</span>
+
+              <h2 id="popup-puppet-name">Puppet's name</h2>
+              <p id="puppet-description">Puppet description</p>
+
+              <button id="takePictureButton" class="take-picture-button">
+                <img
+                  src="img/camera-icon.svg"
+                  alt="camera"
+                  class="camera-icon"
+                />
+                Take picture
+              </button>
+            </div>
+          </div>
+
+          <a href="engelsk.html" class="back-button">
+            <span class="back-arrow"></span>
+            <img src="img/tilbage.png" alt="back" class="back-frontpage" />
+            Back to frontpage
+          </a>
+        </div>
+        <!-- Camera frame -->
+        <div id="camera-screen" class="screen-section" style="display: none">
+          <div class="camera-frame">
+            <video id="camera" autoplay playsinline></video>
+
+            <canvas id="canvas"></canvas>
+
+            <button id="cameraButton" type="button" class="camera-button">
+              <img src="img/camera-icon.svg" alt="Take picture" />
+            </button>
+          </div>
+
+          <!-- Result display — OUTSIDE camera frame! -->
+          <div class="result-display" id="resultDisplay">
+            <div class="polaroid-wrapper">
+              <img
+                id="takenPicture"
+                class="taken-picture"
+                alt="Your picture"
+                src="img/placeholder.png"
+              />
+
+              <div class="polaroid-bottom">
+                <img
+                  src="img/logo.png"
+                  class="polaroid-logo"
+                  alt="Museum Ovartaci logo"
+                />
+              </div>
+            </div>
+            <div class="sharing-section">
+              <input
+                type="tel"
+                id="phoneInput"
+                class="phone-input"
+                placeholder="Enter phone number..."
+              />
+
+              <button id="sharingButton" type="button" class="sharing-button">
+                <img src="img/del.png" alt="Share" class="sharing-icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Back button -->
+          <a href="engelsk.html" class="back-button">
+            <span class="back-arrow">&#8249;</span>
+            Back to frontpage
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="js/engelsk.js"></script>
+  </body>
+</html>

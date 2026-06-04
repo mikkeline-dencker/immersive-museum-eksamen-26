@@ -9,9 +9,9 @@ Beskrivelse af projektet: En interaktiv skærm-quiz (iPad-skærm) for Museum Ova
 ### Mappe- & filstruktur
 Projektet følger den standarde mappe-struktur, for at gøre projektet og koden mere struktureret.
 
-* `/` (Root): Indeholder `index.html`, da det er den fil, browseren leder efter først.
-* `/css`: Indeholder `style.css` (Alt styling og iPad-layout).
-* `/js`: Indeholder `script.js` (Alt logik, pointsystem og kamera-funktionalitet).
+* `/` (Root): Indeholder `index.html` og `engelsk.html`, da det er den fil, browseren leder efter først.
+* `/css`: Indeholder `style.css` og `engelsk.css` (Alt styling og iPad-layout).
+* `/js`: Indeholder `script.js` og `engelsk.js` (Alt logik, pointsystem og kamera-funktionalitet).
 * `/img`: Indeholder alle statiske billeder (.png), ikoner (.svg) og animerede baggrunde (.gif)
 
 ![Mappe-struktur](/img/mappe-struktur.png)
@@ -154,6 +154,10 @@ Vi har undervejs i projektet brugt AI (f.eks. **ChatGPT/Gemini & CoPilot**) som 
 * **Visuelle effekter og CSS-styling:** For at give vores quiz-knapper et ekstra professionelt løft, spurgte vi **Gemini** om, hvordan man laver en glans-effekt (glossy overlay) i ren CSS. Derudover fik vi hjælp til at finjustere billedstørrelserne, så layoutet ikke rykkede sig på iPad-skærmen.
     * **Prompt til glans-effekt på knap:** Google (2026) Gemini, AI-genereret svar til bruger, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/b4782d18ca9c) (Hentet: 29. maj 2026).
     * **Gemini, tilpasning af størrelse på billede side:** Google (2026) Gemini, AI-genereret svar til bruger, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/f17c7614eaef) (Hentet: 29. maj 2026).
+* **Telefon-input + Claude.ai:** Da vi skulle finde ud af, hvordan man laver et input-felt til telefonnumre i HTML, og hvordan man bagefter henter det nummer ud med JavaScript, brugte vi først **W3Schools** til at se det grundlæggende. Men da vi skulle have det til at virke i vores egen løsning, drillede koden. Vi ville nemlig gerne have, at man selv manuelt kunne taste forskellige landekoder ind. Der kunne **Claude** fortælle os hvordan vi kunne sætte det sammen, og give en grundig forklaring, da vi stadig havde nogle spørgsmål efter **W3Schools**.
+    * **W3Schools (2026). HTML Input Types** Tilgængelig via:[Markdown Live Preview](https://www.w3schools.com/html/html_form_input_types.asp) [Hentet 4. juni 2026].
+    * **W3Schools (2026). JavaScript HTML DOM Elements** Tilgængelig via:[Markdown Live Preview](https://www.w3schools.com/js/js_htmldom_elements.asp) [Hentet 4. juni 2026].
+    * **Prompt til telefon-input (+) i js:** Anthropic (2026). Claude.ai Tilgængelig via:[Markdown Live Preview](https://claude.ai/share/4cd43a6c-742a-4c1b-a233-9889fca90898) [Hentet 4. juni 2026].
 * **Forklaringer:** Da vi ikke havde haft om kamera-funktioner og canvas i undervisningen før, brugte vi **ChatGPT** til at skære lærerens kode ud i pap. Vi fik forklaret, hvordan video-feedet og dukkens grafik helt præcist smelter sammen på kamera-siden, så vi forstod logikken bag.
     * **ChatGPT, Prompt til dukke på kamera-siden:** [Markdown Live Preview](https://chatgpt.com/share/6a1e8be2-b0c0-8329-8121-c54028d53954) (Hentet: 2. juni 2026)
 * **Optimering:** Til at gøre vores egen kode mere ren og overskuelig (CoPilot er primært brugt her).

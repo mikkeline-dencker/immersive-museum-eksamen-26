@@ -338,12 +338,22 @@ tagBilledeKnap.addEventListener("click", () => {
   startKamera();
 });
 
-// Telefon inputvalidering - kun tal tilladt
 const telefonInput = document.querySelector("#telefonInput");
 if (telefonInput) {
-  telefonInput.addEventListener("input", (e) => {
-    // Trim og fjern alt der ikke er tal
-    let value = e.target.value.trim();
-    e.target.value = value.replace(/[^0-9]/g, "");
+  telefonInput.addEventListener("input", (event) => {
+    let value = event.target.value;
+
+    // Husker om der var et + i starten
+    const starterMedPlus = value.startsWith("+");
+
+    // Fjerner alt der ikke er tal
+    value = value.replace(/[^0-9]/g, "");
+
+    // Sætter + tilbage på forreste plads
+    if (starterMedPlus) {
+      value = "+" + value;
+    }
+
+    event.target.value = value;
   });
 }
