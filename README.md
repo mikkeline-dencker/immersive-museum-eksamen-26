@@ -42,12 +42,12 @@ Vores ORCA-overvejelser afspejler sig direkte i vores JavaScript-kode:
 * **`dukker` (Objekt):** Fungerer som vores database over **Dukke-objektet**. Her er hver enkelt dukke gemt med sine tilhørende attributter.
 * **Attributter:** Vi bruger variabler som `let spgIndex = 0` (til at tælle hvilket spørgsmål man er på) og `scores` (til at tælle pointene sammen). De ligger øverst i vores JavaScript-fil, så koden hele tiden kan holde øje med, hvor langt brugeren er i quizzen, og sørge for at opdatere vores progress bar i HTML'en
 * **Vores konkrete datatyper:** For at computeren kan forstå vores data, har vi brugt specifikke datatyper i vores `dukker`-database:
-  * `navn`, `billede` og `beskrivelse` er af datatypen **String** (tekst), da det er faste værdier og stier.
-  * Vores pointsystem arbejder med datatypen **Number** (tal), når vi tæller pointene sammen for at finde en vinder.
-  * Vores spørgsmål (`spg`) er gemt i et **Array** (en liste), som indeholder **Objekter** (hvor dataen er parret i par).
+    * `navn`, `billede` og `beskrivelse` er af datatypen **String** (tekst), da det er faste værdier og stier.
+    * Vores pointsystem arbejder med datatypen **Number** (tal), når vi tæller pointene sammen for at finde en vinder.
+    * Vores spørgsmål (`spg`) er gemt i et **Array** (en liste), som indeholder **Objekter** (hvor dataen er parret i par).
 * **Vores data mapping fra ORCA til koden:** Når vi flytter vores planlægning fra ORCA-tabellen og over i JavaScript-filen, gør vi det på denne måde:
-  * De overordnede **Objekter** fra vores tabel (som f.eks. "Dukke") har vi lavet om til rigtige JavaScript-objekter med krøllede parenteser `{}` i koden.
-  * De **Attributter**, som vi fandt frem til hørte under hvert objekt i tabellen, er skrevet ind som egenskaber (properties) inde i objekterne. Det er derfor, at dukkens attributter i koden blot hedder `navn:`, `billede:` og `beskrivelse:`.
+    * De overordnede **Objekter** fra vores tabel (som f.eks. "Dukke") har vi lavet om til rigtige JavaScript-objekter med krøllede parenteser `{}` i koden.
+    * De **Attributter**, som vi fandt frem til hørte under hvert objekt i tabellen, er skrevet ind som egenskaber (properties) inde i objekterne. Det er derfor, at dukkens attributter i koden blot hedder `navn:`, `billede:` og `beskrivelse:`.
 
 ---
 
@@ -149,8 +149,13 @@ At arbejde sammen om koden var en udfordring til at starte med, da vi lige skull
 ## 7. Brug af AI-værktøjer
 
 Vi har undervejs i projektet brugt AI (f.eks. ChatGPT/Gemini & CoPilot) som en digital makker og hjælp til koden. Vi har primært brugt det til:
-* **Fejlsøgning:** Til at finde fejl i vores JavaScript og CSS, hvis noget ikke virkede, eller hvis kameraet drillede.
-* **Forklaringer:** Vi brugte AI til at skære kamera-koden ud i pap for os. Da vi ikke havde haft om kamera-funktioner og canvas i undervisningen før, var det et helt nyt emne, så AI hjalp os med at forstå, hvad de forskellige linjer i koden faktisk gjorde.
+* **Fejlsøgning og logik i JavaScript:** Da vi skulle have pointsystemet og overgangen mellem spørgsmålene til at fungere helt fejlfrit, brugte vi **Gemini** til at få forklaret, hvordan vi bedst kunne løse problemet. Den hjalp os med at få styr på logikken og strukturere vores funktioner rigtigt.
+    * **Prompt til js:** Google (2026) Gemini, Quiz med JavaScript, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/d1c7a66c8f8f) (Hentet: 29. maj 2026).
+* **Visuelle effekter og CSS-styling:** For at give vores quiz-knapper et ekstra professionelt løft, spurgte vi **Gemini** om, hvordan man laver en glans-effekt (glossy overlay) i ren CSS. Derudover fik vi hjælp til at finjustere billedstørrelserne, så layoutet ikke rykkede sig på iPad-skærmen.
+    * **Prompt til glans-effekt på knap:** Google (2026) Gemini, AI-genereret svar til bruger, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/b4782d18ca9c) (Hentet: 29. maj 2026).
+    * **Gemini, tilpasning af størrelse på billede side:** Google (2026) Gemini, AI-genereret svar til bruger, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/f17c7614eaef) (Hentet: 29. maj 2026).
+* **Forklaringer:** Da vi ikke havde haft om kamera-funktioner og canvas i undervisningen før, brugte vi **ChatGPT** til at skære lærerens kode ud i pap. Vi fik forklaret, hvordan video-feedet og dukkens grafik helt præcist smelter sammen på kamera-siden, så vi forstod logikken bag.
+    * **ChatGPT, Prompt til dukke på kamera-siden:** [Markdown Live Preview](https://chatgpt.com/share/6a1e8be2-b0c0-8329-8121-c54028d53954) (Hentet: 2. juni 2026)
 * **Optimering:** Til at gøre vores egen kode mere ren og overskuelig (CoPilot er primært brugt her).
 
 **Al kode er efterfølgende tilpasset, testet og implementeret af os selv, så vi har fuld forståelse for, hvordan løsningen fungerer.**
@@ -161,7 +166,7 @@ Vi har undervejs i projektet brugt AI (f.eks. ChatGPT/Gemini & CoPilot) som en d
 
 For at sikre, at vores kode er fejlfri, følger de officielle webstandarder og ikke har glemte tags eller skjulte fejl, har vi kørt vores filer igennem de officielle valideringsværktøjer (W3C Validators):
 * **HTML:** Vores index.html er blevet valideret med W3C Markup Validation Service 
-([Markdown Live Preview](https://validator.w3.org/nu/#textarea)). Koden er godkendt uden fejl ("Document checking completed. No errors or warnings to show."), dog er der noget info om at vi ikke behøver skråstreg i slutningen af et (`<img>`)-tag f.eks. (`<img src="img/forside.gif" alt="forside gif" class="forside-gif" />`).
+([Markdown Live Preview](https://validator.w3.org/nu/#textarea)). Koden er godkendt uden fejl ("Document checking completed. No errors or warnings to show.")
 * **CSS:** Vores style.css er blevet valideret med W3C CSS Validation Service (Jigsaw) ([Markdown Live Preview](https://jigsaw.w3.org/css-validator/validator)). Alt layout og iPad-styling er godkendt uden fejl.
 
 #### HTML-validering:
