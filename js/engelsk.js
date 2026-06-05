@@ -8,11 +8,11 @@ const questions = [
         puppet: "Lulu",
       },
       {
-        text: "My deep intuition and ability to see through difficult things",
+        text: "My deep intuition and ability to give good advices",
         puppet: "Sinhu",
       },
       {
-        text: "My warmth for people and the ability to make others laugh",
+        text: "That there’s more to me than meets the eye",
         puppet: "Pupparpasta",
       },
       {
@@ -26,12 +26,12 @@ const questions = [
     answers: [
       { text: "Space to be myself", puppet: "Lulu" },
       {
-        text: "Calm and time to immerse myself in my interests",
+        text: "Peace and time to immerse myself in my interests",
         puppet: "Sinhu",
       },
-      { text: "Cosy moments with friends", puppet: "Verda" },
+      { text: "Cozy moments with friends", puppet: "Verda" },
       {
-        text: "Freedom to break out and experience the world",
+        text: "Freedom to break free and experience the world",
         puppet: "Dragen",
       },
     ],
@@ -49,25 +49,31 @@ const questions = [
     question: "What makes you happiest?",
     answers: [
       {
-        text: "Being able to relax, read a book and enjoy a bowl of sweets",
+        text: "Relaxing with a bowl of sweets and a great book",
         puppet: "Sinhu",
       },
-      { text: "Being surrounded by those I care about", puppet: "Pupparpasta" },
-      { text: "Making a friend happy", puppet: "Verda" },
-      { text: "The feeling of being free", puppet: "Dragen" },
+      {
+        text: "When people take the time to get to know the real me",
+        puppet: "Pupparpasta",
+      },
+      { text: "The feeling of being completely free", puppet: "Dragen" },
+      { text: "Making a close friend or family member happy", puppet: "Verda" },
     ],
   },
   {
-    question: "How do you best unwind?",
+    question: "What’s your favorite way to relax?",
     answers: [
-      { text: "By getting out under the open sky", puppet: "Dragen" },
-      { text: "By pursuing my hobbies", puppet: "Lulu" },
       {
-        text: "By closing my eyes and diving into my dreams",
+        text: "When I have no plans, so I can just be spontaneous",
+        puppet: "Dragen",
+      },
+      { text: "By spending time on my favorite hobbies", puppet: "Lulu" },
+      {
+        text: "By closing my eyes and dreaming myself away for a while",
         puppet: "Sinhu",
       },
       {
-        text: "By spending cosy time with family and those closest to me",
+        text: "When I get to sit down and write my thoughts out",
         puppet: "Pupparpasta",
       },
     ],
@@ -99,7 +105,7 @@ const puppets = {
     image: "img/pupparpasta.png",
     background: "img/bog.gif",
     description:
-      "You are the embodiment of play and humour. For you, the world is a place without rigid rules, where there is always room for new, wild and wonderful ideas.",
+      "You are authentic and embody more than meets the eye. You are grounded in yourself, but you take good care of your innermost thoughts until you are ready to share them with those you trust.",
     backgroundClass: "pupparpasta-background",
     imageClass: "pupparpasta-image",
   },
@@ -117,7 +123,7 @@ const puppets = {
     image: "img/dragen.png",
     background: "img/drage-vinger.gif",
     description:
-      "You are the ultimate symbol of freedom. You love the feeling of independence and dream big about being able to move freely – across both time and place.",
+      "You are the ultimate symbol of freedom. You love the feeling of independence and spontaneity, and you dream big about being able to move freely – both in time and space.",
     backgroundClass: "dragen-background",
     imageClass: "dragen-image",
   },

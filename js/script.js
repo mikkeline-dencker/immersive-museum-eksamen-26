@@ -8,11 +8,11 @@ const spg = [
         dukke: "Lulu",
       },
       {
-        tekst: "Min dybe intuition og evne til at gennemskue svære ting",
+        tekst: "Min dybe intuition og evne til at give gode råd",
         dukke: "Sinhu",
       },
       {
-        tekst: "Min varme for mennesker og evnen til at få folk til at grine",
+        tekst: "At jeg har mere dybde, end folk lige tror",
         dukke: "Pupparpasta",
       },
       {
@@ -43,25 +43,30 @@ const spg = [
     spg: "Hvad gør dig mest glad?",
     svar: [
       {
-        tekst: "At kunne slappe af, læse en bog og en skål slik",
+        tekst: "At slappe af med en skål slik og en god bog",
         dukke: "Sinhu",
       },
-      { tekst: "At være omringet af dem jeg holder af", dukke: "Pupparpasta" },
-      { tekst: "At gøre en ven glad", dukke: "Verda" },
-      { tekst: "Følelsen af at være fri", dukke: "Dragen" },
+      {
+        tekst: "Når folk tager sig tid til at lære mit sande jeg at kende", dukke: "Pupparpasta",
+      },
+      { tekst: "Følelsen af at være fuldstændig fri", dukke: "Dragen" },
+      { tekst: "At gøre en nær relation glad", dukke: "Verda" },
     ],
   },
   {
     spg: "Hvordan slapper du bedst af?",
     svar: [
-      { tekst: "Ved at komme ud under den blå himmel", dukke: "Dragen" },
-      { tekst: "Ved at dyrke mine hobbyer", dukke: "Lulu" },
       {
-        tekst: "Ved at lukke øjnene og dykke ned i mine drømme",
+        tekst: "Når jeg ingen planer har, så jeg kan være spontan",
+        dukke: "Dragen",
+      },
+      { tekst: "Ved at dyrke mine yndlings hobbyer", dukke: "Lulu" },
+      {
+        tekst: "Ved at lukke øjnene og drømme mig væk for en stund",
         dukke: "Sinhu",
       },
       {
-        tekst: "Ved at hygge med familie og mine nærmeste",
+        tekst: "Når jeg får lov til at skrive mine tanker ned",
         dukke: "Pupparpasta",
       },
     ],
@@ -75,7 +80,7 @@ const dukker = {
     billede: "img/lulu.png",
     baggrund: "img/maling.gif",
     beskrivelse:
-      "Du er kreativ, fantasifuld og tør være lidt anderledes. Du skaber din egen verden og lader ikke andre definere din identitet – det er modigt!",
+      "Du er kreativ, fantasifuld og tør være din egen person. Du skaber din egen verden og lader ikke andre definere din identitet – det er modigt!",
     baggrundKlasse: "lulu-baggrund",
     billedeKlasse: "lulu-billede",
   },
@@ -84,7 +89,7 @@ const dukker = {
     billede: "img/sinhu.png",
     baggrund: "img/vinger.gif",
     beskrivelse:
-      "Du er en sjælden, dyb og magisk beskytter. Ligesom Ovartacis elskede papmaché-hest er du gruppens mest loyale ven og en rådgiver, man kan søge hjælp hos.",
+      "Du er en sjælden, dyb og magisk beskytter. Ligesom Ovartacis elskede papmaché-hest er du gruppens mest loyale ven og en rådgiver, man kan søge hjælp og råd hos.",
     baggrundKlasse: "sinhu-baggrund",
     billedeKlasse: "sinhu-billede",
   },
@@ -93,7 +98,7 @@ const dukker = {
     billede: "img/pupparpasta.png",
     baggrund: "img/bog.gif",
     beskrivelse:
-      "Du er indbegrebet af leg og humor. For dig er verden et sted uden stramme regler, hvor der altid er plads til nye, skøre og fantastiske idéer.",
+      "Du er autentisk og rummer mere, end øjet ser. Du hviler i dig selv, men passer godt på dine inderste tanker, indtil du er klar til at dele dem med dem, du stoler på.",
     baggrundKlasse: "pupparpasta-baggrund",
     billedeKlasse: "pupparpasta-billede",
   },
@@ -111,7 +116,7 @@ const dukker = {
     billede: "img/dragen.png",
     baggrund: "img/drage-vinger.gif",
     beskrivelse:
-      "Du er det ultimative symbol på frihed. Du elsker følelsen af uafhængighed og drømmer stort om at kunne bevæge dig frit – både i tid og sted.",
+      "Du er det ultimative symbol på frihed. Du elsker følelsen af uafhængighed og spontanitet og drømmer stort om at kunne bevæge dig frit – både i tid og sted.",
     baggrundKlasse: "dragen-baggrund",
     billedeKlasse: "dragen-billede",
   },
