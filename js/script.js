@@ -311,21 +311,42 @@ function startPreview() {
   tegn();
 }
 
-// Tag billede — frys det nuværende canvas-frame
+// Tag billede med nedtælling — frys det nuværende canvas-frame
 kameraKnap.addEventListener("click", () => {
   if (!video.srcObject) {
     alert("Kameraet er ikke startet endnu.");
     return;
   }
 
-  // Stop live preview
-  video.pause();
+  kameraKnap.disabled = true;
+  kameraKnap.style.opacity = "0.5";
 
-  // Canvas viser allerede det frosne billede — sæt det ind i polaroid
-  tagetBillede.src = canvas.toDataURL("image/jpeg", 0.92);
+  let taeller = 3;
+  const display = document.getElementById("nedtaelling-display");
 
-  kameraRamme.style.display = "none";
-  resultatVisning.style.display = "flex";
+  if (display) {
+    display.innerText = taeller;
+    display.style.display = "block";
+  }
+
+  const interval = setInterval(() => {
+    taeller--;
+
+    if (taeller > 0) {
+      if (display) display.innerText = taeller;
+    } else {
+      clearInterval(interval);
+      if (display) display.style.display = "none";
+
+      video.pause();
+      tagetBillede.src = canvas.toDataURL("image/jpeg", 0.92);
+      kameraRamme.style.display = "none";
+      resultatVisning.style.display = "flex";
+
+      kameraKnap.disabled = false;
+      kameraKnap.style.opacity = "1";
+    }
+  }, 1000);
 });
 
 tagBilledeKnap.addEventListener("click", () => {
@@ -353,7 +374,6 @@ if (telefonInput) {
     if (starterMedPlus) {
       value = "+" + value;
     }
-
     event.target.value = value;
   });
 }

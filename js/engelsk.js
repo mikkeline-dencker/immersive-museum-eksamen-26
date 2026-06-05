@@ -316,22 +316,42 @@ function startPreview() {
 
   draw();
 }
-
-// Take picture — freeze the current canvas frame
+// Take picture with countdown — freeze the current canvas frame
 cameraButton.addEventListener("click", () => {
   if (!video.srcObject) {
     alert("The camera has not been started yet.");
     return;
   }
 
-  // Stop live preview
-  video.pause();
+  cameraButton.disabled = true;
+  cameraButton.style.opacity = "0.5";
 
-  // Canvas already shows the frozen frame — insert it into the polaroid
-  takenPicture.src = canvas.toDataURL("image/jpeg", 0.92);
+  let countdown = 3;
+  const display = document.getElementById("countdown-display");
 
-  cameraFrame.style.display = "none";
-  resultDisplay.style.display = "flex";
+  if (display) {
+    display.innerText = countdown;
+    display.style.display = "block";
+  }
+
+  const interval = setInterval(() => {
+    countdown--;
+
+    if (countdown > 0) {
+      if (display) display.innerText = countdown;
+    } else {
+      clearInterval(interval);
+      if (display) display.style.display = "none";
+
+      video.pause();
+      takenPicture.src = canvas.toDataURL("image/jpeg", 0.92);
+      cameraFrame.style.display = "none";
+      resultDisplay.style.display = "flex";
+
+      cameraButton.disabled = false;
+      cameraButton.style.opacity = "1";
+    }
+  }, 1000);
 });
 
 takePictureButton.addEventListener("click", () => {
@@ -350,7 +370,7 @@ if (phoneInput) {
     let value = event.target.value;
 
     const startsWithPlus = value.startsWith("+");
-    
+
     value = value.replace(/[^0-9]/g, "");
 
     if (startsWithPlus) {
