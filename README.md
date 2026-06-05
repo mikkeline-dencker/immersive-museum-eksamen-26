@@ -7,11 +7,11 @@ Beskrivelse af projektet: En interaktiv skærm-quiz (iPad-skærm) for Museum Ova
 ## 1. Projektets Struktur & Navngivning
 
 ### Mappe- & filstruktur
-Projektet følger den standarde mappe-struktur, for at gøre projektet og koden mere struktureret.
+Projektet følger den standarde mappe-struktur, for at gøre projektet og koden mere struktureret. Da quizzen skal stå på et museum, har vi også lavet en engelsk udgave, så udenlandske gæster kan være med.
 
-* `/` (Root): Indeholder `index.html` og `engelsk.html`, da det er den fil, browseren leder efter først.
-* `/css`: Indeholder `style.css` og `engelsk.css` (Alt styling og iPad-layout).
-* `/js`: Indeholder `script.js` og `engelsk.js` (Alt logik, pointsystem og kamera-funktionalitet).
+* `/` (Root): Indeholder `index.html` (vores danske forside) og `engelsk.html` (den engelske forside). `index.html` ligger her, da det er den fil, browseren åbner først.
+* `/css`: Indeholder `style.css` og `engelsk.css` (Alt styling og iPad-layout). Der er lavet to forskellige filer, da vi har oversat alt koden, samt klasser og ID-navne, til engelsk i `engelsk.css`.
+* `/js`: Indeholder `script.js` og `engelsk.js` (Alt logik, pointsystem og kamera-funktionalitet). Der er lavet to forskellige filer, da den engelske version skal bruge sine egen spørgsmål, svar og dukke-beskrivelser, og fordi vi har brugt engelske navne til vores variabler i koden.
 * `/img`: Indeholder alle statiske billeder (.png), ikoner (.svg) og animerede baggrunde (.gif)
 
 ![Mappe-struktur](/img/mappe-struktur.png)
@@ -148,18 +148,18 @@ At arbejde sammen om koden var en udfordring til at starte med, da vi lige skull
 
 ## 7. Brug af AI-værktøjer
 
-Vi har undervejs i projektet brugt AI (f.eks. **ChatGPT/Gemini & CoPilot**) som en digital makker og hjælp til koden. Vi har primært brugt det til:
+Vi har undervejs i projektet brugt AI (f.eks. **ChatGPT/Gemini/Claude.AI & CoPilot**) som en digital makker og hjælp til koden. Vi har primært brugt det til:
 * **Fejlsøgning og logik i JavaScript:** Da vi skulle have pointsystemet og overgangen mellem spørgsmålene til at fungere helt fejlfrit, brugte vi **Gemini** til at få forklaret, hvordan vi bedst kunne løse problemet. Den hjalp os med at få styr på logikken og strukturere vores funktioner rigtigt.
-    * **Prompt til js:** Google (2026) Gemini, Quiz med JavaScript, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/d1c7a66c8f8f) (Hentet: 29. maj 2026).
+    * **Prompt til quiz med JS:** Google (2026) Gemini, *Quiz med JavaScript*, 29. maj. Tilgængelig via: [https://gemini.google.com/share/d1c7a66c8f8f](https://gemini.google.com/share/d1c7a66c8f8f) (Hentet: 29. maj 2026).
 * **Visuelle effekter og CSS-styling:** For at give vores quiz-knapper et ekstra professionelt løft, spurgte vi **Gemini** om, hvordan man laver en glans-effekt (glossy overlay) i ren CSS. Derudover fik vi hjælp til at finjustere billedstørrelserne, så layoutet ikke rykkede sig på iPad-skærmen.
-    * **Prompt til glans-effekt på knap:** Google (2026) Gemini, AI-genereret svar til bruger, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/b4782d18ca9c) (Hentet: 29. maj 2026).
-    * **Gemini, tilpasning af størrelse på billede side:** Google (2026) Gemini, AI-genereret svar til bruger, 29. maj. Tilgængelig via:[Markdown Live Preview](https://gemini.google.com/share/f17c7614eaef) (Hentet: 29. maj 2026).
-* **Telefon-input + Claude.ai:** Da vi skulle finde ud af, hvordan man laver et input-felt til telefonnumre i HTML, og hvordan man bagefter henter det nummer ud med JavaScript, brugte vi først **W3Schools** til at se det grundlæggende. Men da vi skulle have det til at virke i vores egen løsning, drillede koden. Vi ville nemlig gerne have, at man selv manuelt kunne taste forskellige landekoder ind. Der kunne **Claude** fortælle os hvordan vi kunne sætte det sammen, og give en grundig forklaring, da vi stadig havde nogle spørgsmål efter **W3Schools**.
-    * **W3Schools (2026). HTML Input Types** Tilgængelig via:[Markdown Live Preview](https://www.w3schools.com/html/html_form_input_types.asp) [Hentet 4. juni 2026].
-    * **W3Schools (2026). JavaScript HTML DOM Elements** Tilgængelig via:[Markdown Live Preview](https://www.w3schools.com/js/js_htmldom_elements.asp) [Hentet 4. juni 2026].
-    * **Prompt til telefon-input (+) i js:** Anthropic (2026). Claude.ai Tilgængelig via:[Markdown Live Preview](https://claude.ai/share/4cd43a6c-742a-4c1b-a233-9889fca90898) [Hentet 4. juni 2026].
+    * **Prompt til glans-effekt på knap:** Google (2026) Gemini, *Glans-effekt på knapper i CSS*, 29. maj. Tilgængelig via: [https://gemini.google.com/share/b4782d18ca9c](https://gemini.google.com/share/b4782d18ca9c) (Hentet: 29. maj 2026).
+    * **Prompt til tilpasning af størrelse på billede side:** Google (2026) Gemini, *Tilpasning af størrelse på billedside*, 29. maj. Tilgængelig via: [https://gemini.google.com/share/f17c7614eaef](https://gemini.google.com/share/f17c7614eaef) (Hentet: 29. maj 2026).
+* **Telefon-input & Claude.ai:** Da vi skulle finde ud af, hvordan man laver et input-felt til telefonnumre i HTML, og hvordan man bagefter henter det nummer ud med JavaScript, brugte vi først **W3Schools** til at se det grundlæggende. Men da vi skulle have det til at virke i vores egen løsning, drillede koden. Vi ville nemlig gerne have, at man selv manuelt kunne taste forskellige landekoder ind. Der kunne **Claude** fortælle os hvordan vi kunne sætte det sammen, og give en grundig forklaring, da vi stadig havde nogle spørgsmål efter **W3Schools**.
+    * **W3Schools (2026). HTML Input Types** Tilgængelig via: [https://www.w3schools.com/html/html_form_input_types.asp](https://www.w3schools.com/html/html_form_input_types.asp) (Hentet: 4. juni 2026).
+    * **W3Schools (2026). JavaScript HTML DOM Elements** Tilgængelig via: [https://www.w3schools.com/js/js_htmldom_elements.asp](https://www.w3schools.com/js/js_htmldom_elements.asp) (Hentet: 4. juni 2026).
+    * **Prompt til telefon-input i JS:** Anthropic (2026) Claude.ai, *Telefon-input med landekode i JavaScript.* Tilgængelig via: [https://claude.ai/share/4cd43a6c-742a-4c1b-a233-9889fca90898](https://claude.ai/share/4cd43a6c-742a-4c1b-a233-9889fca90898) (Hentet: 4. juni 2026).
 * **Forklaringer:** Da vi ikke havde haft om kamera-funktioner og canvas i undervisningen før, brugte vi **ChatGPT** til at skære lærerens kode ud i pap. Vi fik forklaret, hvordan video-feedet og dukkens grafik helt præcist smelter sammen på kamera-siden, så vi forstod logikken bag.
-    * **ChatGPT, Prompt til dukke på kamera-siden:** [Markdown Live Preview](https://chatgpt.com/share/6a1e8be2-b0c0-8329-8121-c54028d53954) (Hentet: 2. juni 2026)
+    * **Prompt til dukke på kamera-siden:** OpenAI (2026) ChatGPT. *Placering af dukke på kamera-siden.* Tilgængelig via: [https://chatgpt.com/share/6a1e8be2-b0c0-8329-8121-c54028d53954](https://chatgpt.com/share/6a1e8be2-b0c0-8329-8121-c54028d53954) (Hentet: 2. juni 2026).
 * **Optimering:** Til at gøre vores egen kode mere ren og overskuelig (CoPilot er primært brugt her).
 
 **Al kode er efterfølgende tilpasset, testet og implementeret af os selv, så vi har fuld forståelse for, hvordan løsningen fungerer.**
@@ -170,8 +170,8 @@ Vi har undervejs i projektet brugt AI (f.eks. **ChatGPT/Gemini & CoPilot**) som 
 
 For at sikre, at vores kode er fejlfri, følger de officielle webstandarder og ikke har glemte tags eller skjulte fejl, har vi kørt vores filer igennem de officielle valideringsværktøjer (W3C Validators):
 * **HTML:** Vores index.html er blevet valideret med W3C Markup Validation Service 
-([Markdown Live Preview](https://validator.w3.org/nu/#textarea)). Koden er godkendt uden fejl ("Document checking completed. No errors or warnings to show.")
-* **CSS:** Vores style.css er blevet valideret med W3C CSS Validation Service (Jigsaw) ([Markdown Live Preview](https://jigsaw.w3.org/css-validator/validator)). Alt layout og iPad-styling er godkendt uden fejl.
+([https://validator.w3.org/nu/#textarea](https://validator.w3.org/nu/#textarea)). Koden er godkendt uden fejl ("Document checking completed. No errors or warnings to show.")
+* **CSS:** Vores style.css er blevet valideret med W3C CSS Validation Service (Jigsaw) ([https://jigsaw.w3.org/css-validator/validator](https://jigsaw.w3.org/css-validator/validator)). Alt layout og iPad-styling er godkendt uden fejl.
 
 #### HTML-validering:
 ![HTML-validering](/img/html-vali.png)
