@@ -560,6 +560,10 @@ h1 {
    KAMERA-SKÆRM
    ================================================ */
 
+.skaerm-sektion {
+  display: none;
+}
+
 .kamera-ramme {
   width: 80%;
   height: 85%;

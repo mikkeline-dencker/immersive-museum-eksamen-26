@@ -560,6 +560,10 @@ h1 {
    CAMERA SCREEN
    ================================================ */
 
+.screen-section {
+  display: none;
+}
+
 .camera-frame {
   width: 80%;
   height: 85%;
