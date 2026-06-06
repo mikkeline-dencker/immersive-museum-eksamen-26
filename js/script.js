@@ -324,7 +324,6 @@ kameraKnap.addEventListener("click", () => {
   }
 
   kameraKnap.disabled = true;
-  kameraKnap.style.opacity = "0.5";
 
   let taeller = 3;
   const display = document.getElementById("nedtaelling-display");

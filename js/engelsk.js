@@ -330,7 +330,6 @@ cameraButton.addEventListener("click", () => {
   }
 
   cameraButton.disabled = true;
-  cameraButton.style.opacity = "0.5";
 
   let countdown = 3;
   const display = document.getElementById("countdown-display");
