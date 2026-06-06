@@ -125,6 +125,12 @@ const dukker = {
 // Pointsystem
 let spgIndex = 0;
 let scores = { Lulu: 0, Sinhu: 0, Pupparpasta: 0, Verda: 0, Dragen: 0 };
+const glitterLyd = new Audio("img/glitter.mp3");
+
+function spilGlitterLyd() {
+  glitterLyd.currentTime = 0;
+  glitterLyd.play().catch(() => {});
+}
 
 // Starter quizzen
 function startQuiz() {
@@ -179,6 +185,7 @@ function visLoadingSkaerm() {
 function visResultat() {
   document.getElementById("vente-side").classList.remove("aktiv");
   document.getElementById("resultat-skaerm").classList.add("aktiv");
+  spilGlitterLyd();
 
   // Finder højeste score blandt alle dukker
   const maxScore = Math.max(...Object.values(scores));

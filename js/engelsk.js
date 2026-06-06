@@ -132,6 +132,12 @@ const puppets = {
 // Scoring system
 let questionIndex = 0;
 let scores = { Lulu: 0, Sinhu: 0, Pupparpasta: 0, Verda: 0, Dragen: 0 };
+const glitterSound = new Audio("img/glitter.mp3");
+
+function playGlitterSound() {
+  glitterSound.currentTime = 0;
+  glitterSound.play().catch(() => {});
+}
 
 // Starts the quiz
 function startQuiz() {
@@ -186,6 +192,7 @@ function showLoadingScreen() {
 function showResult() {
   document.getElementById("wait-screen").classList.remove("active");
   document.getElementById("result-screen").classList.add("active");
+  playGlitterSound();
 
   // Finds the highest score among all puppets
   const maxScore = Math.max(...Object.values(scores));
