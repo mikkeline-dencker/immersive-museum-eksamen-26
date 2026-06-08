@@ -144,6 +144,11 @@ At arbejde sammen om koden var en udfordring til at starte med, da vi lige skull
 * **Arbejdsform:** Vi mødtes fysisk hver gang vi skulle kode, for at sikre, at vi snakkede godt sammen og kunne hjælpe hinanden. Efter vores startproblemer fandt vi hurtigt ud af, hvordan man kan *branche* og *merge* sit arbejde. For at være på den helt sikre side og undgå at lave fejl i fælles-koden ved et uheld, valgte vi dog en meget sikker løsning: Vi havde hver især vores eget repository (arbejdsmappe) på GitHub, hvor vi testede ting af, og så kopierede vi først koden over i det fælles projekt, når vi var helt sikre på, at det virkede.
 * **Hjemme-arbejde:** Vi ville give hinanden hjemme-opgaver med kodning, for at få optimeret tiden, så meget som muligt. Når vi mødtes igen, ville vi gennemgå koden, og sørge for at alt var som det skulle være.
 
+#### Oversigt af commits
+**Jeg (Emilia), har haft README.md som processdokument, som kan ses i antallet af commits**
+![Commits](/img/commit.png)
+![Commits](/img/commit-oversigt.png)
+
 ---
 
 ## 7. Brug af AI-værktøjer
