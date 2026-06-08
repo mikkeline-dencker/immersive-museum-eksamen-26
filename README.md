@@ -12,7 +12,7 @@ Projektet følger den standarde mappe-struktur, for at gøre projektet og koden 
 * `/` (Root): Indeholder `index.html` (vores danske forside) og `engelsk.html` (den engelske forside). `index.html` ligger her, da det er den fil, browseren åbner først.
 * `/css`: Indeholder `style.css` og `engelsk.css` (Alt styling og iPad-layout). Der er lavet to forskellige filer, da vi har oversat alt koden, samt klasser og ID-navne, til engelsk i `engelsk.css`.
 * `/js`: Indeholder `script.js` og `engelsk.js` (Alt logik, pointsystem og kamera-funktionalitet). Der er lavet to forskellige filer, da den engelske version skal bruge sine egen spørgsmål, svar og dukke-beskrivelser, og fordi vi har brugt engelske navne til vores variabler i koden.
-* `/img`: Indeholder alle statiske billeder (.png), ikoner (.svg) og animerede baggrunde (.gif)
+* `/img`: Indeholder alle statiske billeder (.png), ikoner (.svg), sound (mp3) og animerede baggrunde (.gif)
 
 ![Mappe-struktur](/img/mappe-struktur.png)
 
