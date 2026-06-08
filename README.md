@@ -17,8 +17,8 @@ Projektet følger den standarde mappe-struktur, for at gøre projektet og koden 
 ![Mappe-struktur](/img/mappe-struktur.png)
 
 ### Navngivning af mapper, filer og class'
-* **Filer og mapper:** Navngivet med udelukkende små, engelske bogstaver uden specialtegn (æ, ø, å) for at undgå scannings-fejl.
-* **HTML/CSS:** Vi har anvendt kebab-case (f.eks. `#kamera-skaerm`) konsekvent til klasser og ID'er.
+* **Filer og mapper:** Navngivet med udelukkende små bogstaver uden specialtegn (æ, ø, å) for at undgå scannings-fejl.
+* **HTML/CSS:** Vi har anvendt kebab-case og camelCase (f.eks. `#kamera-skaerm` & `tagetBillede`) konsekvent til klasser og ID'er.
 * **JavaScript:** Vi har anvendt camelCase konsekvent til variabler og funktioner (f.eks. `let spgIndex`, `function startQuiz()`). Navnene er holdt semantiske og beskrivende, så koden er let at læse.
 
 ---
@@ -96,7 +96,7 @@ Dette er den CSS-kode, vi tænder og slukker for via JavaScript, når brugeren t
   display: flex;
 }
 ```
-* Ved at bruge `display: none` som standard, er alle vores 5-6 skærm-sektioner usynlige i starten. Først når vi tilføjer klassen `.aktiv`, dukker skærmen op.
+* Ved at bruge `display: none` som standard, er alle vores 5 skærm-sektioner usynlige i starten. Først når vi tilføjer klassen `.aktiv`, dukker skærmen op.
 
 ### 3. Kommentarer i koden (HTML, CSS & JS)
 Vi har gjort meget ud af at lave kommentarer i alle vores filer. (<!- --> i HTML, /* */ i CSS & // i JS)

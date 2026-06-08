@@ -694,7 +694,7 @@ h1 {
   border-radius: 30px;
   box-sizing: border-box;
   background: #91a6b9;
-  font-family: Yrsa, serif;
+  font-family: yrsa, serif;
   font-size: 20px;
   color: #345a7c;
   outline: none;
@@ -703,7 +703,7 @@ h1 {
 
 .phone-input::placeholder {
   color: #fff;
-  font-family: Yrsa, sans-serif;
+  font-family: yrsa, sans-serif;
 }
 
 .sharing-button {
